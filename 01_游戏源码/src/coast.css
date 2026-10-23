@@ -1,0 +1,103 @@
+/* v0.4 painted coast. Text and counters remain live, separate from artwork. */
+#mapNamePlate,#mapAtmosphere,#mapObjective{display:none!important}
+.coast-screen{font-family:"Microsoft YaHei","Segoe UI",sans-serif;color:#674026}
+.coast-screen button{cursor:pointer;font-family:inherit}
+.coast-icon{display:inline-block;width:60px;height:60px;flex:none;background-image:var(--coast-ui);background-size:400% 400%;background-position:calc(var(--ix)*100%/3) calc(var(--iy)*100%/3);background-repeat:no-repeat;pointer-events:none}
+.coast-yard,.coast-yard .yard-world{background:none!important;inset:0;overflow:visible}
+.coast-screen .coast-header{position:absolute;inset:0 0 auto;height:155px;padding:0;background:none;box-shadow:none;display:block;border:0;z-index:20;pointer-events:none}
+.coast-header h1{position:absolute;margin:0;top:-35px;left:150px;width:244px;height:195px;display:grid;place-items:center}
+.coast-header h1>.coast-icon{position:absolute;inset:0;width:100%;height:100%}
+.coast-header h1>span{position:relative;top:34px;color:#ffebad;font-size:36px;font-weight:1000;text-shadow:0 3px #693719,-1px -1px #693719,1px -1px #693719;white-space:nowrap}
+.coast-coins{position:absolute;left:13px;top:44px;width:126px;height:51px;display:flex;align-items:center;border:3px solid #d89c53;border-radius:26px;background:linear-gradient(#a3663c,#75442d);box-shadow:0 4px #603921;color:#fff1ce;font-size:28px}
+.coast-coins .coast-icon{width:53px;height:53px;margin-left:-7px;margin-right:8px}
+.coast-version{position:absolute;right:16px;top:8px;color:#d8f0ff;font-size:12px}
+.coast-yard .yard-quick-actions{position:absolute;top:60px;right:9px;left:auto;bottom:auto;width:82px;display:grid;grid-template-columns:82px;grid-auto-rows:87px;gap:3px;padding:0;background:none;z-index:24}
+.coast-yard .yard-quick-actions button{position:relative;width:82px;height:87px;min-height:0;padding:0;border:0;background:none;box-shadow:none;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;border-radius:18px}
+.coast-yard .yard-quick-actions .coast-icon{position:absolute;inset:0;width:82px;height:82px}
+.coast-yard .yard-quick-actions b{position:relative;margin-bottom:6px;padding:0 8px;border-radius:4px;background:#825029;color:#fff0cd;font-size:20px;line-height:24px;text-shadow:0 2px #58311d}
+.coast-dot{position:absolute!important;right:6px;top:6px;width:12px;height:12px;border:2px solid #fff3c2;border-radius:50%;background:#fb4141;box-shadow:0 2px 4px #672526}
+.coast-screen .coast-upgrade,.coast-screen .home-cast-entry{position:absolute;bottom:auto;transform:none!important;display:flex;align-items:center;justify-content:center;gap:6px;padding:0;border:0;background:none;pointer-events:auto;z-index:21;filter:drop-shadow(0 4px 4px #10466466)}
+.coast-screen .coast-button-bg{position:absolute;inset:0;width:100%;height:100%;z-index:-1;background-size:434.783% 740.741%;background-position:calc((var(--ix)*25% + 1%)/.77) 12.139%}
+.coast-screen .coast-upgrade>.coast-icon:not(.coast-button-bg){width:46px;height:46px}
+.coast-screen .coast-upgrade b{font-size:25px;color:#fff0ce;text-shadow:0 2px #834419,-1px -1px #834419}
+.coast-screen .home-cast-entry>.coast-icon:not(.coast-button-bg){width:68px;height:68px}
+.coast-screen .home-cast-entry b{font-size:40px;color:#fff6ba;white-space:nowrap;text-shadow:0 3px #396800,-1px -1px #396800,1px -1px #396800}
+.coast-map{position:absolute;top:910px;left:145px;width:250px;min-height:36px;border:0;border-radius:18px;color:#fff6d9;background:#17618ac9;font-size:13px;pointer-events:auto;z-index:22}
+/* v0.5: animate the parent, outside the editor's inline !important layout styles. */
+.coast-screen .coast-yard{translate:0 0;opacity:1;transition:translate .65s cubic-bezier(.4,0,.2,1),opacity .5s}
+.coast-screen.fishing-live .coast-yard{translate:0 -1050px;opacity:0;pointer-events:none!important}
+/* Keep children painted during the parent's exit; explicitly hidden editor items stay hidden. */
+.coast-screen.fishing-live .coast-yard .life-header,.coast-screen.fishing-live .coast-yard .yard-quick-actions,.coast-screen.fishing-live .coast-yard .home-cast-entry{opacity:1;visibility:visible;pointer-events:none!important}
+.coast-screen .life-overlay{background:#15385155;backdrop-filter:blur(2px)}
+.coast-screen .bottom-sheet,.coast-screen .scene-sheet,.coast-panel{background:linear-gradient(110deg,#ffe9b9,#efcc91);border:12px solid #98603a;border-radius:27px;box-shadow:inset 0 0 0 3px #e2aa62,0 7px 0 #5f3929,0 20px 40px #042b5266;color:#674127}
+.coast-screen .bottom-sheet{padding:20px 25px;max-height:830px;width:482px;left:29px;bottom:65px}
+.coast-panel header{display:flex;align-items:center;justify-content:space-between;min-height:64px;border-bottom:2px solid #c99660;margin-bottom:16px}
+.coast-panel h2{font-size:29px;margin:0;color:#754524}
+.coast-panel header button{min-width:50px;min-height:50px;width:50px;height:50px;border:0;background:none;padding:0}
+.coast-panel header button .coast-icon{width:50px;height:50px}
+.coast-panel .sheet-scroll{padding:0 2px 10px;max-height:680px;overflow-y:auto}
+.coast-note{font-size:13px;color:#826146;line-height:1.7}
+.coast-balance{display:flex;align-items:center;justify-content:center;font-size:20px;gap:8px;margin:0 0 14px}
+.coast-balance>.coast-icon{width:39px;height:39px}
+.coast-gear{display:flex;align-items:center;gap:8px;background:#f5dca8;border:2px solid #c89554;border-radius:16px;margin-bottom:13px;padding:12px 7px;min-height:135px}
+.coast-gear>.coast-icon{width:69px;height:90px}
+.coast-gear>div{flex:1}
+.coast-gear h3{font-size:22px;margin:0 0 8px}
+.coast-gear h3 small{font-size:16px}
+.coast-gear p{font-size:13px;margin:3px 0;line-height:1.55}
+.coast-next{color:#208560}
+.coast-gold,.coast-result-actions>button,.coast-look>button{border:3px solid #e4aa41;border-radius:12px;background:linear-gradient(#ffc43e,#e79513);box-shadow:0 4px #9a5722;color:#fff9dc;font-size:18px;font-weight:900;text-shadow:0 1px #8d481c;min-height:51px}
+.coast-gear>button{width:93px;flex:none;min-height:65px}
+.coast-gear>button b,.coast-gear>button span{display:block;font-size:17px}
+.coast-screen button:disabled{cursor:default;filter:grayscale(.85);opacity:.7}
+.coast-wardrobe{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-bottom:12px}
+.coast-look{min-width:0;padding:8px;border:2px solid #c89864;border-radius:16px;background:#f5dcab;text-align:center}
+.coast-look.selected{border:3px solid #db9c1d;box-shadow:0 0 10px #fff4b9}
+.coast-skin{display:block;width:100%;aspect-ratio:1;background-size:calc(var(--cols)*100%) calc(var(--rows)*100%);background-position:calc(var(--sx)*100%/(var(--cols) - 1)) calc(var(--sy)*100%/(var(--rows) - 1));background-repeat:no-repeat}
+.coast-look h3{font-size:17px;margin:5px 0 8px}
+.coast-recipe{min-height:95px;font-size:12px}
+.coast-recipe>div{display:flex;align-items:center;text-align:left;gap:4px;min-height:42px}
+.recipe-fish{width:48px;height:35px;object-fit:contain}
+.silhouette{filter:brightness(0)}
+.coast-recipe span b{display:block;font-size:12px;color:#936b33}
+.coast-look>button{width:100%;font-size:15px}
+.coast-overlay{display:flex;align-items:center;justify-content:center}
+.coast-harvest{width:452px;padding:18px;box-sizing:border-box;text-align:center}
+.coast-harvest header small{font-size:14px}
+.coast-catch-strip{display:flex;gap:10px;overflow-x:auto;scrollbar-width:thin;padding:10px 0 15px;position:relative;min-height:102px}
+.coast-catch{flex:0 0 81px;position:relative;height:98px;border-radius:12px;background:#deb88370;padding-top:8px}
+.coast-catch>.recipe-fish{width:70px;height:54px;transition:opacity .25s,transform .35s}
+.coast-catch>span{display:block;font-size:11px;transition:opacity .2s}
+.coast-catch>b{position:absolute;inset:12px 0 auto;display:flex;align-items:center;justify-content:center;gap:3px;opacity:0;transform:scale(.3);transition:opacity .3s,transform .35s;color:#a26719}
+.coast-catch>b .coast-icon{width:43px;height:43px}
+.coast-catch.converted>.recipe-fish,.coast-catch.converted>span{opacity:0;transform:translateY(-8px) scale(.5)}
+.coast-catch.converted>b{opacity:1;transform:scale(1)}
+.coast-harvest-total{font-size:18px;margin:15px 0}
+.coast-result-actions{display:flex;gap:12px;margin:20px 0 8px}
+.coast-result-actions>button{flex:1;min-height:58px}
+.coast-result-actions>button:first-child{background:linear-gradient(#75bbdc,#318ab6);border-color:#94d4ee;box-shadow:0 4px #29617c}
+.coast-skip{font-size:12px;border:0;background:none;color:#865c36;text-decoration:underline;min-height:40px}
+.coast-screen.reduced-motion *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+.coast-screen .coast-panel{position:relative;isolation:isolate;border:0;box-shadow:0 15px 35px #09364855;background:none;padding:66px 34px 35px}
+.coast-screen .coast-frame-art{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.coast-screen .coast-panel header h2{font-size:28px;font-weight:900}
+.coast-screen .coast-panel header button{min-width:52px;min-height:52px}
+.coast-screen .bottom-sheet.coast-panel{left:auto;bottom:auto}
+.coast-screen .coast-overlay{align-items:center}
+.coast-screen .coast-panel header button{position:absolute;right:20px;top:21px}
+.coast-screen .coast-panel>.sheet-scroll{max-height:620px}
+.coast-screen .coast-look .coast-skin{clip-path:inset(3.5% 0 0 0)}
+.coast-screen .coast-tackle .coast-note{background:#f4dfad;border-radius:8px;padding:8px;color:#624025}
+/* v0.6 reference composition and aspect-safe canvas artwork. */
+.coast-icon{background:none!important;object-fit:contain}
+.coast-header h1{left:158px;top:-37px;width:225px;height:179px}
+.coast-header h1>span{top:40px;font-size:36px}
+.coast-coins{left:12px;top:46px;width:130px;height:40px}
+.coast-yard .yard-quick-actions{top:55px;right:10px;width:78px;grid-template-columns:78px;grid-auto-rows:83px;gap:4px}
+.coast-yard .yard-quick-actions button{width:78px;height:83px}
+.coast-yard .yard-quick-actions .coast-icon{width:78px;height:83px}
+.coast-yard .yard-quick-actions b{background:none;margin-bottom:8px;font-size:20px;text-shadow:0 2px #58311d,-1px -1px #58311d,1px -1px #58311d}
+.coast-screen .coast-upgrade>.coast-icon:not(.coast-button-bg){width:42px;height:48px}
+.coast-screen .coast-upgrade b{font-size:24px}
+.coast-screen .home-cast-entry b{font-size:40px}
+.coast-map{top:917px}

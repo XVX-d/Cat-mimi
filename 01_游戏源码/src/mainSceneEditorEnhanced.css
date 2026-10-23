@@ -1,0 +1,14 @@
+.topbar h1 em{margin-left:7px;color:#e7c66f;font-size:11px;font-style:normal;font-weight:700}
+.scene-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-bottom:20px}
+.scene-tabs button{min-height:34px;border:1px solid #4d636b;border-radius:6px;background:#314249;color:#cfe0dc;cursor:pointer}
+.scene-tabs button:hover{background:#405860}
+.scene-tabs button.active{border-color:#efc568;background:#655536;color:#fff2c5}
+.autosave{margin-left:auto;color:#72d3a3;font-size:10px}
+.property-form input:disabled{opacity:.38;cursor:not-allowed}
+.selection-box{min-width:8px;min-height:8px}
+#canvasSection.hidden{display:none}
+@media(max-width:900px){
+  .topbar nav{gap:4px}
+  .topbar button,.file-button{padding:0 8px}
+  .autosave{display:none}
+}

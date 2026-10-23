@@ -1,0 +1,49 @@
+/* v0.18 — approved warm wooden cat-care UI; all text remains live and editable. */
+.care-room{background:#c89a60!important;color:#633019;isolation:isolate;image-rendering:auto}
+.care-backdrop{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;pointer-events:none;image-rendering:auto}
+.care-world{position:absolute;inset:0;pointer-events:none}
+.care-world button{pointer-events:auto;cursor:pointer;font-family:inherit}
+.care-room .care-header{position:absolute;top:0;left:0;width:540px;height:82px;margin:0;padding:0;background:none;box-shadow:none;border:0;z-index:20;display:block}
+.care-header h1{position:absolute;left:111px;top:8px;width:274px;height:65px;margin:0;display:grid;place-items:center;box-sizing:border-box;border:5px solid #bd8046;border-radius:17px;background:repeating-linear-gradient(3deg,#a16435 0,#a16435 18px,#b67842 20px,#b67842 22px);box-shadow:0 4px 0 #67391f,inset 0 2px 0 #eab77b,inset 0 -3px 0 #8d502a}
+.care-header h1 canvas{display:none}
+.care-header h1 span{position:relative;top:4px;color:#fff1c8;font-size:31px;font-weight:1000;text-shadow:0 3px #7a391a,-1px -1px #7a391a,1px 0 #7a391a}
+.care-back{position:absolute;left:15px;top:11px;width:57px;height:57px;border:3px solid #ebbd7a;border-radius:50%;background:linear-gradient(#c88a4d,#874b2c);box-shadow:0 3px 0 #542a18,inset 0 0 0 3px #9c5e31;color:#fff3d8;font:bold 52px/43px sans-serif;cursor:pointer}
+.care-coins{position:absolute;right:10px;top:26px;min-width:99px;height:36px;border:3px solid #d79854;border-radius:22px;background:#713b25;display:flex;align-items:center;justify-content:center;padding-left:28px;padding-right:9px;color:#fff3d6;font-size:21px;box-shadow:0 3px #51281a}
+.care-coins canvas{position:absolute;left:-13px;top:-11px;width:50px;height:50px}
+.care-affection{position:absolute;left:62px;top:95px;width:416px;height:54px;display:flex;align-items:center;gap:8px;padding:8px 14px;box-sizing:border-box;background:linear-gradient(#fff7df,#f9dfac);border:5px solid #b7753d;border-radius:19px;box-shadow:0 3px 0 #704123,inset 0 0 0 2px #fff4d4;z-index:10}
+.care-heart{font-size:35px;line-height:1;color:#ff6f8e;filter:drop-shadow(0 2px 0 #b84662)}
+.care-affection>b{white-space:nowrap;font-size:17px}
+.care-meter{height:18px;flex:1;overflow:hidden;border:2px solid #aa7b51;border-radius:20px;background:#be9b76;box-shadow:inset 0 2px 4px #5f311740}
+.care-meter i{display:block;height:100%;border-radius:inherit;background:linear-gradient(#ffb5c0,#ed5e84);transition:width .65s ease}
+.care-affection strong{white-space:nowrap;font-size:17px}
+.care-wardrobe{position:absolute;right:10px;top:162px;width:85px;height:96px;border:0;padding:0;background:none;z-index:9;color:#61351c}
+.care-wardrobe canvas{position:absolute;inset:0;width:100%;height:100%}
+.care-wardrobe b{position:absolute;left:0;right:0;bottom:3px;font-size:17px;color:#fff1cf;text-shadow:0 2px #6b301b}
+.care-aquarium{position:absolute;left:413px;top:331px;width:123px;height:162px;padding:0;background:transparent;border:0;z-index:8;display:flex;align-items:flex-end;justify-content:center}
+.care-aquarium span{display:block;background:linear-gradient(#e9b775,#b9793f);border:3px solid #8c502b;box-shadow:inset 0 0 0 2px #f2c98d,0 3px #65321a;border-radius:8px;padding:3px 19px;color:#6b331b;font-size:20px;font-weight:900;transform:rotate(3deg)}
+.care-cat{position:absolute;left:126px;top:276px;width:304px;height:417px;z-index:7;pointer-events:none}
+.care-cat-canvas{display:block;width:100%;height:100%;filter:drop-shadow(0 6px 3px #60361c40)}
+.care-caption{position:absolute;top:709px;left:70px;right:70px;text-align:center;margin:0;color:#654022;font-size:15px;font-weight:800;text-shadow:0 1px 2px #fff6d9;background:#fff3dcbb;border-radius:20px;padding:5px 10px}
+.care-room .care-interact{position:absolute;top:775px;width:246px;height:106px;border:0;padding:0;background:transparent;color:#643018;filter:drop-shadow(0 5px 3px #7046223b);z-index:12;touch-action:manipulation}
+.care-pet{left:19px}.care-feed{left:276px}
+.care-button-art{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.care-interact>span{position:absolute;left:44%;right:6%;top:16%;display:flex;flex-direction:column;align-items:center;gap:2px;white-space:nowrap}
+.care-interact b{font-size:28px;line-height:1.13;font-weight:1000;letter-spacing:3px}
+.care-interact em{font-size:13px;line-height:19px;font-weight:900;font-style:normal;background:#ffc3ae;border-radius:15px;padding:0 8px}
+.care-feed em{background:#dce8a0}
+.care-interact small{font-size:12px;line-height:18px;font-weight:900;color:#a16b3d}
+.care-interact:active:not(:disabled){scale:.97}
+.care-interact:disabled{cursor:default;filter:saturate(.55) brightness(.95)}
+.care-help{position:absolute;top:898px;left:20px;right:20px;margin:0;text-align:center;color:#643b21;font-size:13px;text-shadow:0 1px #fff3d7}
+.care-version{position:absolute;right:12px;bottom:9px;font-size:11px;color:#fff0d2;text-shadow:0 1px #6a4229}
+.care-room button:focus-visible{outline:4px solid #45c1df;outline-offset:3px}
+.care-hearts{position:absolute;inset:0;opacity:0}
+.care-hearts i{position:absolute;top:20%;left:8%;color:#ff7498;font-style:normal;font-size:29px;text-shadow:0 2px #fbe2d6}
+.care-hearts i:nth-child(2){left:83%;top:30%;font-size:22px;animation-delay:.18s!important}
+.care-hearts i:nth-child(3){left:73%;top:8%;font-size:18px;animation-delay:.36s!important}
+.care-float{position:absolute;top:5%;left:5%;right:5%;text-align:center;font-size:25px;font-weight:1000;color:#e65e80;text-shadow:0 2px #fff5e3,1px 0 #fff5e3;opacity:0}
+.care-celebrate .care-hearts{opacity:1}.care-celebrate .care-hearts i{animation:careHearts 1.6s ease-out both}
+.care-celebrate .care-float{animation:careGain 2.2s ease-out both}
+@keyframes careHearts{0%{opacity:0;transform:translateY(10px) scale(.6)}25%{opacity:1}100%{opacity:0;transform:translateY(-50px) scale(1.1)}}
+@keyframes careGain{0%{opacity:0;transform:translateY(10px)}20%,70%{opacity:1}100%{opacity:0;transform:translateY(-22px)}}
+.reduced-motion .care-celebrate .care-hearts{display:none}.reduced-motion .care-celebrate .care-float{animation:none;opacity:1}

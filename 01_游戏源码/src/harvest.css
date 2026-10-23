@@ -1,0 +1,70 @@
+
+.harvest-v09{position:relative;isolation:isolate;padding:68px 30px 32px;width:470px;max-height:860px;box-shadow:0 0 55px #ffc95455;animation:harvest-open .55s ease-out}
+.harvest-v09>*:not(.coast-frame-art):not(.harvest-rays){position:relative;z-index:1}
+.harvest-v09 .harvest-rays{position:absolute;inset:-25px;z-index:-2;pointer-events:none;background:repeating-conic-gradient(from 0deg,#ffdf8733 0deg 9deg,transparent 9deg 23deg);mask-image:radial-gradient(ellipse,#0005,transparent 72%);animation:harvest-light 9s linear infinite}
+.harvest-v09 header{display:flex;align-items:center;justify-content:space-between;margin:0 0 14px;min-height:35px;padding:0}
+.harvest-v09 header small{font-size:15px;color:#73431f}
+.harvest-v09 header .harvest-skip{width:auto;height:36px;min-height:36px;font-size:14px;padding:0 12px;border-radius:18px;background:#80502b;color:#fff2c4}
+.harvest-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;overflow-y:auto;max-height:356px;padding:8px 5px 12px;scrollbar-width:thin}
+.harvest-fish-card{--quality:#399eea;position:relative;opacity:0;transform:translateY(12px) scale(.65);min-width:0;border:3px solid var(--quality);border-radius:14px;padding:8px 3px;background:linear-gradient(150deg,#fff8df,#eccb88);box-shadow:0 3px 0 #68361966,inset 0 0 10px #fff8;transition:opacity .18s,transform .24s;color:#673a22}
+.harvest-fish-card.tier-1{--quality:#b05cef}.harvest-fish-card.tier-2{--quality:#efb021}.harvest-fish-card.tier-3{--quality:#ed5159}
+.harvest-fish-card.revealed{opacity:1;transform:none}
+.harvest-fish-card.rare-pop{animation:harvest-rare .65s ease-out}
+.harvest-fish{height:62px;position:relative;display:flex;justify-content:center;align-items:center}
+.harvest-fish .recipe-fish{width:80px;height:58px;object-fit:contain}
+.harvest-fish strong{position:absolute;right:1px;bottom:0;border-radius:10px;background:#624527;color:#fff6cf;padding:2px 5px;font-size:13px}
+.harvest-fish-card>span{display:block;font-size:14px;font-weight:900;margin-top:4px}
+.harvest-fish-card>small{display:block;font-size:11px;margin:4px 0}
+.harvest-fish-card>b{color:#aa6716;font-size:18px}
+.harvest-fish-card>em{display:block;font-style:normal;font-size:10px;color:#66823c;opacity:0;height:15px}
+.harvest-fish-card.sold>em{opacity:1}.harvest-fish-card.sold{animation:harvest-sold .45s ease-out}
+.harvest-income{border:2px solid #cc9342;border-radius:18px;background:radial-gradient(ellipse at top,#fff9ca,#f4c461);padding:10px 5px;margin:10px 0 14px;box-shadow:inset 0 2px #fff9,0 4px #97532444}
+.harvest-income>small{font-size:15px;font-weight:800;color:#7a491f}
+.harvest-income>div{color:#8d4b16;font-size:13px}
+.harvest-income b{font-size:40px;color:#fff8c6;text-shadow:2px 2px #955218,-1px -1px #955218;font-weight:900}
+.harvest-currency{color:#e8a619;font-size:26px;text-shadow:1px 2px #9d5316}
+.harvest-income p{font-size:12px;margin:2px 0;color:#83512c}
+.harvest-v09 .harvest-double{width:100%;min-height:55px;margin-bottom:13px;background:linear-gradient(#ffe987,#ffba22 55%,#ea8c12);box-shadow:0 4px #955020,0 0 20px #ffdb7c66}
+.harvest-double strong{margin-left:10px;font-size:24px}
+.harvest-v09 .coast-result-actions{display:flex;gap:12px}
+.harvest-v09 .coast-result-actions>button{flex:1;font-size:18px}
+.harvest-v09 button:disabled{opacity:.5;filter:saturate(.4);cursor:default}
+.harvest-v09 button:not(:disabled):active{transform:translateY(3px) scale(.97)}
+.harvest-v09 .harvest-coins{position:absolute!important;inset:0;z-index:5!important;pointer-events:none;overflow:visible}
+.harvest-flying-coin{position:absolute;width:28px;height:28px;border-radius:50%;background:radial-gradient(circle,#fff2a3,#e8a31e);filter:drop-shadow(0 0 5px #fff29b)}
+.harvest-complete .harvest-income{animation:harvest-total .5s ease-out}
+.harvest-empty{padding:25px 0;color:#80512c}
+@keyframes harvest-open{from{opacity:0;transform:scale(.86);filter:brightness(1.8)}to{opacity:1;transform:scale(1);filter:brightness(1)}}
+@keyframes harvest-light{to{transform:rotate(360deg)}}
+@keyframes harvest-rare{0%{transform:scale(.7);filter:brightness(2)}60%{transform:scale(1.1)}100%{transform:scale(1)}}
+@keyframes harvest-sold{50%{filter:brightness(1.5);box-shadow:0 0 18px var(--quality)}}
+@keyframes harvest-total{30%{transform:translateX(-2px) scale(1.05)}55%{transform:translateX(2px) scale(1.03)}100%{transform:none}}
+.reduced-motion .harvest-v09,.reduced-motion .harvest-v09 *{animation:none!important;transition:none!important}
+@media(prefers-reduced-motion:reduce){.harvest-v09,.harvest-v09 *{animation:none!important;transition:none!important}}
+.coast-screen .coast-panel.harvest-v09{padding:62px 28px 32px;box-shadow:0 0 45px #ffbc5344,0 18px 40px #06344988}
+.coast-screen .coast-panel.harvest-v09 header button{position:static;min-width:60px;min-height:36px}
+.harvest-v09 [hidden]{display:none!important}
+.harvest-fish-card{box-sizing:border-box;width:auto}
+.harvest-v09 .harvest-rays{z-index:0;opacity:.55}
+.harvest-overlay{overflow:clip}
+.harvest-v09{overflow:clip}
+
+/* v0.10 selected minimal timber art. Each live component samples the original atlas. */
+.coast-screen .coast-panel.harvest-minimal{padding:55px 32px 40px;box-shadow:none;border-radius:55px;filter:drop-shadow(0 12px 12px #123a5066)}
+.harvest-minimal .harvest-rays{display:none}
+.harvest-minimal header{border-bottom:0;margin-bottom:9px;min-height:34px}
+.coast-screen .coast-panel.harvest-minimal header button{background:#b07845;border-radius:12px;min-height:34px}
+.harvest-minimal .harvest-grid{gap:9px;padding:4px 2px 8px;height:330px;max-height:330px;align-content:start}
+.harvest-minimal .harvest-fish-card{border:0;background-color:#f2d29a;background-size:100% 100%;background-repeat:no-repeat;box-shadow:none;border-radius:24px;padding:10px 6px 9px}
+.harvest-minimal .harvest-fish{height:56px}
+.harvest-minimal .harvest-fish-card>span{font-size:14px}
+.harvest-minimal .harvest-fish-card>small{font-size:11px;margin:3px 0}
+.harvest-minimal .harvest-fish-card>em{height:13px}
+.harvest-minimal .harvest-income{border:0;background-color:#f8d481;background-size:100% 100%;background-repeat:no-repeat;box-shadow:none;border-radius:25px;margin:9px 0 12px;padding:14px 10px}
+.coast-screen .harvest-minimal .harvest-double,.coast-screen .harvest-minimal .coast-result-actions>button{border:0;border-radius:22px;background-color:transparent;background-size:100% 100%;background-repeat:no-repeat;box-shadow:none;min-height:62px;text-shadow:0 2px 2px #74432b88}
+.harvest-minimal .coast-result-actions{gap:12px}
+.harvest-minimal .harvest-double{margin-bottom:10px}
+.harvest-minimal .harvest-income b{font-size:38px}
+.harvest-minimal .harvest-fish-card.sold{box-shadow:none}
+.harvest-minimal .harvest-grid:empty{display:none}
+.harvest-minimal .harvest-empty{min-height:330px;box-sizing:border-box;display:grid;place-items:center;margin:0}
