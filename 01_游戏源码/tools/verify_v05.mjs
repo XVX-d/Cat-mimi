@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const css=fs.readFileSync(new URL('../src/coast.css',import.meta.url),'utf8');
+const home=fs.readFileSync(new URL('../src/systems/homeSystem.js',import.meta.url),'utf8');
+const layout=fs.readFileSync(new URL('../src/systems/homeLayoutSystem.js',import.meta.url),'utf8');
+const rule=selector=>css.slice(css.indexOf(selector+'{')+selector.length+1).split('}')[0];
+const exit=rule('.coast-screen.fishing-live .coast-yard');
+assert.match(exit,/opacity:0/);
+assert.match(exit,/translate:0 -1050px/);
+assert.match(rule('.coast-screen .coast-yard'),/opacity:1/);
+assert.match(rule('.coast-screen .coast-yard'),/transition:/);
+assert.ok(!layout.includes('selector: ".coast-yard"'),'layout edits must not override the exit wrapper');
+assert.ok(layout.includes('element.style.setProperty("opacity", String(item.opacity), "important")'),'preserve saved editor opacity');
+assert.match(home,/screen\.inert=true/);
+assert.match(home,/screen\.inert=false/);
+assert.ok(home.includes('classList.remove("hidden","fishing-live")'));
+console.log('[v0.5] 首页父层退场、返回恢复、编辑器样式保留和交互锁定检查通过');

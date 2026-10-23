@@ -1,0 +1,34 @@
+{
+  "generated": [
+    "src/assets_b64.js",
+    "src/_export_src.js"
+  ],
+  "optionalFallback": [
+    "wave_transition.png",
+    "fisher_idle.png",
+    "fisher_cast.png",
+    "fisher_fishing.png",
+    "fisher_reel.png",
+    "ui_tut.png",
+    "ui_bosshp.png",
+    "ui_ico_atk.png",
+    "ui_ico_line_lv1.png",
+    "ui_ico_line_lv2.png",
+    "ui_ico_line_lv3.png",
+    "ui_ico_line_lv4.png",
+    "ui_ico_hook_lv1.png",
+    "ui_ico_hook_lv2.png",
+    "ui_ico_hook_lv3.png",
+    "ui_ico_hook_lv4.png",
+    "ui_card.png",
+    "ui_btn_blue.png",
+    "ui_pip.png",
+    "ui_pip_on.png",
+    "ui_txt_goal.png",
+    "ui_txt_settle.png",
+    "ui_txt_gear.png",
+    "ui_txt_cta.png",
+    "ui_txt_line.png",
+    "ui_txt_hook.png"
+  ]
+}

@@ -1,0 +1,17 @@
+/* v0.51: center the title in the wooden face, below the shell ornament. */
+html[lang=en] .coast-header h1>span{
+ font-family:"Trebuchet MS","Arial Rounded MT Bold",sans-serif;
+ font-size:30px;font-weight:900;line-height:1.02;letter-spacing:-.5px;
+ width:172px;white-space:normal;text-align:center;top:40px;
+ color:#fff0bf;-webkit-text-stroke:.6px #603619;paint-order:stroke fill;
+ text-shadow:0 2px 0 #673b21,0 3px 1px #47271580;
+}
+html[lang=en] .coast-screen .coast-upgrade{gap:3px;padding:0 12px}
+html[lang=en] .coast-screen .coast-upgrade>.coast-icon:not(.coast-button-bg){width:34px;height:42px}
+html[lang=en] .coast-screen .coast-upgrade b{
+ font-family:"Trebuchet MS","Arial Rounded MT Bold",sans-serif;
+ font-size:26px;font-weight:900;line-height:1;letter-spacing:-.5px;
+ white-space:nowrap;text-align:center;color:#fff5ca;
+ -webkit-text-stroke:.6px #784016;paint-order:stroke fill;
+ text-shadow:0 2px 0 #784016;flex:none;
+}
