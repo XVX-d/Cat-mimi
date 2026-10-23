@@ -1,0 +1,1427 @@
+{
+  "package_revision": "r1",
+  "game_version": "v0.53",
+  "excluded_files": [
+    "01_游戏源码/seaking_standalone.html",
+    "01_游戏源码/src/_export_src.js",
+    "01_游戏源码/src/assets_b64.js",
+    "01_游戏源码/tools/__pycache__/coin_tester.cpython-312.pyc",
+    "01_游戏源码/tools/__pycache__/crazygames_loading_build.cpython-312.pyc",
+    "01_游戏源码/tools/__pycache__/crazygames_performance_build.cpython-312.pyc",
+    "01_游戏源码/tools/__pycache__/crazygames_sdk_build.cpython-312.pyc",
+    "01_游戏源码/tools/coin_tester.py",
+    "01_游戏源码/tools/coin_tester_panel.js"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 322,
+      "sha256": "3196662ba3ee31243d7e201b95a03b53d30dbf9af9884a8ac647cd55eafb0fe2"
+    },
+    {
+      "path": "01_游戏源码/.gitignore",
+      "bytes": 321,
+      "sha256": "8a3f4468c16c65b86091a341d832acd9ceb230559ade688938ecdc22b9a6122d"
+    },
+    {
+      "path": "01_游戏源码/README.md",
+      "bytes": 2469,
+      "sha256": "9d46b20049c9af03d4695c25944b0cf7c86fe51a7276f7036a33d84c1d3c11a6"
+    },
+    {
+      "path": "01_游戏源码/assets/audio/Amb_AboveWater_Loop.mp3",
+      "bytes": 155942,
+      "sha256": "633d6df818e12a4e7a97e68fbc7f3a9d93b42f99e2b08d742e4f63d6d4acbcc8"
+    },
+    {
+      "path": "01_游戏源码/assets/audio/Music_Loop.mp3",
+      "bytes": 129193,
+      "sha256": "285b23d9fcf91db4a2902da779b43d2fa35629f41f75f91b469206523a44d408"
+    },
+    {
+      "path": "01_游戏源码/assets/audio/Silence_10s.mp3",
+      "bytes": 40351,
+      "sha256": "59943eb2c97292cf45e8aef2a47eac75208c9b1e2980def90a4679f3a746b4d7"
+    },
+    {
+      "path": "01_游戏源码/assets/audio/UI_Alert.mp3",
+      "bytes": 20942,
+      "sha256": "3c02561fcf9ccd90870c6bc4509a5ee17dd7ad60578d105e0866b2c5935a827f"
+    },
+    {
+      "path": "01_游戏源码/assets/audio/UI_Catch_BigFish.mp3",
+      "bytes": 26793,
+      "sha256": "d11ad1ccabadb5e2d05729b79fbf75b8d6d99980f1c3b8010499f19bbd9a15a4"
+    },
+    {
+      "path": "01_游戏源码/assets/audio/UI_Catch_MediumFish.mp3",
+      "bytes": 19270,
+      "sha256": "4b29b198caf6b27bc036d2a06143e553c0a3dfb7f21bdc8af0f06222615391a1"
+    },
+    {
+      "path": "01_游戏源码/assets/audio/UI_Catch_SmallFish.mp3",
+      "bytes": 15508,
+      "sha256": "c2160da2d36805f46f71cbde303a57db44a1d7c141067be4065c563ebe3039b3"
+    },
+    {
+      "path": "01_游戏源码/assets/audio/UI_Click.mp3",
+      "bytes": 3387,
+      "sha256": "82aea7a36bf1162cf6b467a2b6d388710e406ebc92c3b394be492e1ecf1c6e1b"
+    },
+    {
+      "path": "01_游戏源码/assets/audio/UI_Coin_Collect.mp3",
+      "bytes": 20524,
+      "sha256": "b2af4391040e17d4504b1eb1e575061f563d13e5db7fadfc2a49e908703bb9a5"
+    },
+    {
+      "path": "01_游戏源码/assets/audio/UI_Coin_Drop.mp3",
+      "bytes": 10493,
+      "sha256": "ec8417bc4c8d9274df2868ba9127be297de88dafab7bef79e8485fefbcc6d5e1"
+    },
+    {
+      "path": "01_游戏源码/assets/audio/UI_Coin_Lack.mp3",
+      "bytes": 8403,
+      "sha256": "247c67b7518c658513c84b47ef2873beef0669059e6514938eca1dddf10c9459"
+    },
+    {
+      "path": "01_游戏源码/assets/audio/UI_Fish_Hit.mp3",
+      "bytes": 4223,
+      "sha256": "20c3b4adfaec5ef608956c18a6334ae5e951dcdb30e4c7ca2fce7e518240a176"
+    },
+    {
+      "path": "01_游戏源码/assets/audio/UI_FishingRod_ReelIn.mp3",
+      "bytes": 14254,
+      "sha256": "2714f4a72bab83b68cc5bead61791b418e4ae6a689ed4cdcedc67c2632b7a1a8"
+    },
+    {
+      "path": "01_游戏源码/assets/audio/UI_FishingRod_Throw.mp3",
+      "bytes": 27211,
+      "sha256": "d79cf6dbb070ec4195a41279d41ad9d5354dfe50d64e0721b0928e4e00ffd003"
+    },
+    {
+      "path": "01_游戏源码/assets/audio/UI_LevelUp.mp3",
+      "bytes": 13418,
+      "sha256": "f20d8222677325ea5988fe04cbfd902706138309ff93ad6bd733f49a4a1f338f"
+    },
+    {
+      "path": "01_游戏源码/assets/audio/UI_Menu_Open.mp3",
+      "bytes": 36824,
+      "sha256": "ebe2397dd960342ad8887c7e18a732a2238683251618fb639f37333bbeb7ffa3"
+    },
+    {
+      "path": "01_游戏源码/assets/audio/UI_Player_Hurt.mp3",
+      "bytes": 13000,
+      "sha256": "5fd95fd0b86330f3c45468d995496ae5c02630774bcceefd6e51ba6dc733acd2"
+    },
+    {
+      "path": "01_游戏源码/assets/audio_crazygames/Music_Loop_v053.mp3",
+      "bytes": 1996032,
+      "sha256": "3b40bdeadc9181b327c897272b7af6ec147bb6668e5ec76a8f310f6538a979b8"
+    },
+    {
+      "path": "01_游戏源码/assets/bg_loading.webp",
+      "bytes": 143638,
+      "sha256": "c63144daff01fe9fbd8480290edf763c8cb375c7ebd2f6705fc509e8de2ac9d9"
+    },
+    {
+      "path": "01_游戏源码/assets/bg_surface.jpg",
+      "bytes": 66355,
+      "sha256": "941a52dd98f3915e28e526c005646e4de9d92d59330c24a914bf395ee057a317"
+    },
+    {
+      "path": "01_游戏源码/assets/bg_water.jpg",
+      "bytes": 143384,
+      "sha256": "42773cd0304c8b474d75fa6e52301a9c3955decd78c4fd38068969fc7919281e"
+    },
+    {
+      "path": "01_游戏源码/assets/boat.png",
+      "bytes": 37613,
+      "sha256": "056506f35a87408f2367e4da5a28ade90d6cd8b187f3b106b8685d4ee940b7a3"
+    },
+    {
+      "path": "01_游戏源码/assets/boss_swim_cat.webp",
+      "bytes": 17776,
+      "sha256": "763f08399f4b85c0ee4e62e93e73c90ad261e7248f13fb9bb80ab0b1b96ac15f"
+    },
+    {
+      "path": "01_游戏源码/assets/boss_tentacle_0.webp",
+      "bytes": 10914,
+      "sha256": "c0168b847c1bfffdcbbef4d07e5942af6dc35ff76bd903d2046e9d777e555b61"
+    },
+    {
+      "path": "01_游戏源码/assets/boss_tentacle_1.webp",
+      "bytes": 12634,
+      "sha256": "e715497a39e9016859cb277d6f054b11023cb3aea0780c69cc93a27bb64946a5"
+    },
+    {
+      "path": "01_游戏源码/assets/boss_tentacle_2.webp",
+      "bytes": 11444,
+      "sha256": "9a8a6f19f42006bbccb55a02b47a9acc62c42ebfe0523b7ef141d49160b290a2"
+    },
+    {
+      "path": "01_游戏源码/assets/boss_tentacle_3.webp",
+      "bytes": 13776,
+      "sha256": "64345437fad1051894da46c3b741c24d7a109969400fd80226093dd50bef9066"
+    },
+    {
+      "path": "01_游戏源码/assets/boss_tentacle_4.webp",
+      "bytes": 13022,
+      "sha256": "3aace240bff6dcdd832e5dd597aa5544a5c18e9ed492de859ed7b7a829c4caf0"
+    },
+    {
+      "path": "01_游戏源码/assets/boss_tentacle_5.webp",
+      "bytes": 12802,
+      "sha256": "39c38f8daa75c5a55c88e1fe6ecf64e9f7189cbb686e1ed11acf2556ed426791"
+    },
+    {
+      "path": "01_游戏源码/assets/boss_tentacle_6.webp",
+      "bytes": 9328,
+      "sha256": "1a2005b8600e6f59007f46d77585973ef6bb9248ad525f551d46abd344d7204b"
+    },
+    {
+      "path": "01_游戏源码/assets/boss_tentacle_7.webp",
+      "bytes": 12824,
+      "sha256": "25e303b6738ee1339729086bce543e09a86dd08990d55b7be1e7233615db2baa"
+    },
+    {
+      "path": "01_游戏源码/assets/boss_tentacle_castle.webp",
+      "bytes": 119058,
+      "sha256": "7bf657e9f26cd2809f9d96a13ece3e19dec594236c5c11956408cdbb59deaf18"
+    },
+    {
+      "path": "01_游戏源码/assets/care_bunny_v019.png",
+      "bytes": 1790251,
+      "sha256": "a08957be734dbcb23cf80f3e815b58d3322f8e653386f149bd5a1e2248eca9ca"
+    },
+    {
+      "path": "01_游戏源码/assets/care_buttons_v018.png",
+      "bytes": 1176612,
+      "sha256": "8f3fc7b58e45b10836e1ab78307e7102801c3a59be0f1d0d3d468f83cb9a6452"
+    },
+    {
+      "path": "01_游戏源码/assets/care_cat_v018.png",
+      "bytes": 1887816,
+      "sha256": "ef894f00c6ea2525e0a6c65e01b8ab5e8e5182048475dd9eb3f98315283c3f96"
+    },
+    {
+      "path": "01_游戏源码/assets/care_chef_v019.png",
+      "bytes": 1882748,
+      "sha256": "7d4a8a7b6f4891c1165fef275dd2480b3bb734dedd1eb3d42133db0c75801fd9"
+    },
+    {
+      "path": "01_游戏源码/assets/care_clown_v019.png",
+      "bytes": 1868492,
+      "sha256": "1606c2eca77635bbaefde2e335a37c9504fdc73ffd1fd99fb85d5437e4a1aaa6"
+    },
+    {
+      "path": "01_游戏源码/assets/care_cowboy_v019.png",
+      "bytes": 1932961,
+      "sha256": "ccaac0e106fee3372f8ae3a6a9115671b953e0ab73139ea597e34cdd7520729a"
+    },
+    {
+      "path": "01_游戏源码/assets/care_police_v019.png",
+      "bytes": 1970531,
+      "sha256": "0e0df2c755c87ffa13aa0b94875b95ba0abd448fb599d1bef251bfad1938966f"
+    },
+    {
+      "path": "01_游戏源码/assets/care_rocker_v019.png",
+      "bytes": 2083410,
+      "sha256": "57ee87c02dcf242e84140e5249cc1f750414216a0d461e344203c1fa49dfcbe8"
+    },
+    {
+      "path": "01_游戏源码/assets/care_room_v018.png",
+      "bytes": 2044301,
+      "sha256": "f887f43adf300b7e435bccf66da0092c75e2a683e71f02be30fd96b3a0915235"
+    },
+    {
+      "path": "01_游戏源码/assets/care_santa_v019.png",
+      "bytes": 1900315,
+      "sha256": "aa1e0e09946ad4013051474eb3dcbcde483470b17b039120a43eebd8d39a11da"
+    },
+    {
+      "path": "01_游戏源码/assets/care_tennis_v019.png",
+      "bytes": 1965489,
+      "sha256": "e46d2aead1ceb6e4b17636b135978139e87725511d3ecd354e8f895c33f9fd54"
+    },
+    {
+      "path": "01_游戏源码/assets/care_vampire_v019.png",
+      "bytes": 1793485,
+      "sha256": "753e82aa7d74a1dfda5865f171d37cd670974fd65675c1cdde3fcc7465fc8414"
+    },
+    {
+      "path": "01_游戏源码/assets/cat_companion_sheet_small.png",
+      "bytes": 305666,
+      "sha256": "0b4f530bf9c8dc26afcda797b5e61b46eb0e566d715fbb3b2c707d977d569d32"
+    },
+    {
+      "path": "01_游戏源码/assets/catalog_journal_v016.png",
+      "bytes": 1873735,
+      "sha256": "c50e57481c39eb4621ef443750f0b8ac4ca7ebc1e25c8a911ab6c54fc79ee765"
+    },
+    {
+      "path": "01_游戏源码/assets/coast_cat_pose_v027.png",
+      "bytes": 341481,
+      "sha256": "f2759e8241e78a7c15dfba8d0dfe02b7c255f3d8e07615b259985a5c7fe6685c"
+    },
+    {
+      "path": "01_游戏源码/assets/coast_pier_v04.png",
+      "bytes": 1775733,
+      "sha256": "1035e6e21f28f62beabc8faadd2e7b679e377a5331a38ee087f9d0189f5fdffa"
+    },
+    {
+      "path": "01_游戏源码/assets/coast_skins_v04.png",
+      "bytes": 1887706,
+      "sha256": "38224e8ad840c58c3133f370c7b8d7848e528ecae0f09192160bd488fa13d49a"
+    },
+    {
+      "path": "01_游戏源码/assets/coast_surface_v04.png",
+      "bytes": 1994780,
+      "sha256": "21550a01480cf09daf134cc60da48ce19fe346602e39d3027d7c014503352e5b"
+    },
+    {
+      "path": "01_游戏源码/assets/coast_ui_v04.png",
+      "bytes": 1611167,
+      "sha256": "13570fae00831c01c23ac115d671aceae499bc06d48354b52de840a45c00cb1a"
+    },
+    {
+      "path": "01_游戏源码/assets/coast_water_v04.png",
+      "bytes": 1405205,
+      "sha256": "bca8e2eedc6f6b90c21843d0c96c071f4a4e93eb1914b2a4611b808ee73266d9"
+    },
+    {
+      "path": "01_游戏源码/assets/coin.png",
+      "bytes": 3355,
+      "sha256": "ab6349f69836b9358b7911ef5271a84d382acd9e6c61d28433e2a1043a20a776"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_01_v021.png",
+      "bytes": 106049,
+      "sha256": "ce103f0bf7ca636feceff558a8cf49746e341421593b8eff7588eb4751257814"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_02_v021.png",
+      "bytes": 130206,
+      "sha256": "46f2bbe9c14cf78ff754960636672f714311bf9c6a7c7a5292655bd6df40ee1e"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_03_v021.png",
+      "bytes": 111646,
+      "sha256": "f321f0d93212141deedd09e5322600f8c207e7db1cba1d7a6fe6eee958353317"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_04_v021.png",
+      "bytes": 144911,
+      "sha256": "309bbba1ee32489ea0304d86900bd8b830ce454d94a6878d4ed846b38086b9bb"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_05_v021.png",
+      "bytes": 114001,
+      "sha256": "9f0d735bc0084ac33c8cf2c99c9458026566f20749b3988b1819d955b85b542f"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_06_v021.png",
+      "bytes": 128505,
+      "sha256": "7fa10e2087e9be24425b572bec9af4d5f3c863f1e1afdf09c87d0e655c3c5c1a"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_07_v021.png",
+      "bytes": 119712,
+      "sha256": "555d448444748e6f3afa949f470156eb1e142f4d2cef94c8c4552c4a97d399eb"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_08_v021.png",
+      "bytes": 126567,
+      "sha256": "0793bd23bc0b3117594e3ce209e6942644d180552fcd58e9bcb1f3223309bf61"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_09_v021.png",
+      "bytes": 117363,
+      "sha256": "985c0b4c3309a2f46af06ac63a7617faf70251532d240374c1b31bdbb49aa6e7"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_10_v021.png",
+      "bytes": 107692,
+      "sha256": "e28d6c2648597323a34ddb173b341be42cb7aae2d057398688af42c414e81002"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_11_v025.png",
+      "bytes": 1470963,
+      "sha256": "8d88f6b2b1bbc91fdcd0cd83a200d965cc8ed74746f4bbeb42248a206e783fd8"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_12_v025.png",
+      "bytes": 1532716,
+      "sha256": "5f2f5d1f9322dfc87bc7a12ca310c518ed6811c9981eb3db981b443bae8f233e"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_13_v025.png",
+      "bytes": 1475779,
+      "sha256": "344ee83dba6b712b1f69236aa14cf9e5b9827fc3f5c74c99368f7027f5722eab"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_14_v025.png",
+      "bytes": 1117113,
+      "sha256": "e4c5e5f4334d91937e0e4d6f9de0553ee5d4e3398a82c0c5dc5a4cf7e3dd7983"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_15_v025.png",
+      "bytes": 1486160,
+      "sha256": "57ee1b762cd0452be02bfb099b00c2254ff665b929e5b02254609159599678cc"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_16_v025.png",
+      "bytes": 1423389,
+      "sha256": "1391d5bd73eccfaefc52869b591e6fda8c589b4a39ceae1d0e3b0345f48f9a8a"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_17_v025.png",
+      "bytes": 1483196,
+      "sha256": "dc83b6bb88c534cc57daf3a8534f60d6158f5b67c587643d089709d3ce1d12c9"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_18_v025.png",
+      "bytes": 1532546,
+      "sha256": "9dddf24ec08c77e8b76e07e4967325092c31758b089e5e4f499885b735140c1e"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_19_v025.png",
+      "bytes": 1431815,
+      "sha256": "4c1b01b5729a2a1abbc0d0e184c0df6763f01b88e730bfe585e8681e7d127c1f"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_20_v025.png",
+      "bytes": 1682664,
+      "sha256": "0449875f6ddcc81539541c75995297c2d18ffa3fa2819efc60449e35fe1d1657"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_21_v026.png",
+      "bytes": 1644294,
+      "sha256": "a15f6fd185214cafc0c06c00647027f1b51e94a201f55be16e7972c23deadb5a"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_22_v026.png",
+      "bytes": 1211013,
+      "sha256": "57f52df100f25f4dd8beb8cd90308654d61ebf5e2af0d353d2bb9919036f0936"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_23_v026.png",
+      "bytes": 1627357,
+      "sha256": "b87f468c401b185ef3bd3a65607d3f71ddea87b23cbda71f192a59d493ba45e0"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_24_v026.png",
+      "bytes": 1410670,
+      "sha256": "b6b995651102bea01c7d9c661501d111700acfb1a996bef40f36813ab84c7a90"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_25_v026.png",
+      "bytes": 1569132,
+      "sha256": "94cf5515e138ba37d0df52376e452a6ef191388c3e5445e572ba995907baff19"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_26_v026.png",
+      "bytes": 1564264,
+      "sha256": "bc6f7b3e937422fbf44054af1a6a3c449aa9af9728bde753f6e9467e3969c12a"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_27_v026.png",
+      "bytes": 1727795,
+      "sha256": "4dce2012b34ab02f4c6c1108f987be8bc6ef19193d503a635e8cce781bb8d701"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_28_v026.png",
+      "bytes": 986374,
+      "sha256": "87d7692022dc336faf2afa61baf86abbada464f3c585a615d7a65dd926db2161"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_29_v026.png",
+      "bytes": 1826781,
+      "sha256": "16c0b7e4a9961eb57f4bde8788962040b299500e8ca49ee1f455010856ec6632"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_30_v026.png",
+      "bytes": 1606371,
+      "sha256": "05d771030354d45b0650acd740b3bafa309f329f1395c7104d5828cd1c2dde64"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_l.png",
+      "bytes": 20423,
+      "sha256": "70be1735dff4e872e2dc44b877b23787cf59006819b0027663bf413dd8a4b5cc"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_m.png",
+      "bytes": 9591,
+      "sha256": "ce732288d630b51c57b37d081e70f6fcfb0835569990e448c29bad54bbf13e5c"
+    },
+    {
+      "path": "01_游戏源码/assets/fish_s.png",
+      "bytes": 8551,
+      "sha256": "3fdfe8f23a23b77adaa101230abc1bf7145da6a3e00388fde52cd1a1e8332ddb"
+    },
+    {
+      "path": "01_游戏源码/assets/fisher.png",
+      "bytes": 33347,
+      "sha256": "260be989333ad654b5b91d67d46c172269e59f3ddd768c457943a35b382187bc"
+    },
+    {
+      "path": "01_游戏源码/assets/furniture_glass_aquarium.webp",
+      "bytes": 3794,
+      "sha256": "5e03277776ef07902b37aa0ec6f741415dbe26aa43e02de2237fa971fadeca68"
+    },
+    {
+      "path": "01_游戏源码/assets/furniture_shell_lamp.webp",
+      "bytes": 4926,
+      "sha256": "83a409e745d7f13d0b6de5f297e7629545c98e168e16b3fb2653c3fccbae47c8"
+    },
+    {
+      "path": "01_游戏源码/assets/furniture_simple_bed.webp",
+      "bytes": 4514,
+      "sha256": "8ac1bed25d37c261c6f288f194a9cb1b4d93cbbb47eaab8fe5fbb0dc535b42ce"
+    },
+    {
+      "path": "01_游戏源码/assets/furniture_tackle_station.webp",
+      "bytes": 8658,
+      "sha256": "483954e92ad7cc4962dec3d8aea68681592cd33ee875c9a4ab29ad288f6dea9d"
+    },
+    {
+      "path": "01_游戏源码/assets/furniture_trophy_cabinet.webp",
+      "bytes": 5828,
+      "sha256": "ac82814339c42581b38e9f9a78122ec248f43d6deb8cb0a526cae8a87654ac25"
+    },
+    {
+      "path": "01_游戏源码/assets/furniture_wood_cabinet.webp",
+      "bytes": 4346,
+      "sha256": "4090f40a317560608afac734ea2d9fa420d7da95af5d82df8c3d6a314e65c523"
+    },
+    {
+      "path": "01_游戏源码/assets/furniture_woven_rug.webp",
+      "bytes": 5786,
+      "sha256": "62c59a0009e2dac19ecccc9cc06d4edc42fa654b43bdcca23362cf79cbb6f95c"
+    },
+    {
+      "path": "01_游戏源码/assets/harvest_minimal_v010.png",
+      "bytes": 1435960,
+      "sha256": "02772cf1ebf4f61a30c82d74b1ca225e9cc747c6680236f4143b1d2bedd9cf17"
+    },
+    {
+      "path": "01_游戏源码/assets/home_hut_background.jpg",
+      "bytes": 93470,
+      "sha256": "a2329a70057065c3b447d65fa098dddd3ecfba9963114ce07ae12d2b5ff48a45"
+    },
+    {
+      "path": "01_游戏源码/assets/home_hut_sprite.webp",
+      "bytes": 109246,
+      "sha256": "77843bf6f58d97ed447c9e940eae29e3358a193622795864f440dfd05f92195c"
+    },
+    {
+      "path": "01_游戏源码/assets/home_interior_pixel.jpg",
+      "bytes": 130922,
+      "sha256": "6047b4b1a858aeb47877dd1471964624a95c80f566ec75c757e3a1fe361b2133"
+    },
+    {
+      "path": "01_游戏源码/assets/home_main_background.jpg",
+      "bytes": 102348,
+      "sha256": "bef6cc91b3a4a4122d4ebc39baa42843dcf25041c4b4aa81c2e2bdbb7847fea4"
+    },
+    {
+      "path": "01_游戏源码/assets/home_pier_sprite.webp",
+      "bytes": 20996,
+      "sha256": "f1624222f7e45f28e19ffe21c0f3a241b9db1de45e292b455c0b7c7977574f77"
+    },
+    {
+      "path": "01_游戏源码/assets/home_upper_background.jpg",
+      "bytes": 179482,
+      "sha256": "7bf3492bda789b8bdb2971466595172a349ecd59a0cc4c7fd7daee72440eba33"
+    },
+    {
+      "path": "01_游戏源码/assets/hook_ag.png",
+      "bytes": 7537,
+      "sha256": "a494597704573c99b3b15af16c2a139aed8b924559dfc4959381b5dbe550359b"
+    },
+    {
+      "path": "01_游戏源码/assets/hook_au.png",
+      "bytes": 7650,
+      "sha256": "834a3f29a6ef2518d9a1cbd2de0b829e531425adfc117acc1eb3fad37107e6fa"
+    },
+    {
+      "path": "01_游戏源码/assets/hook_cu.png",
+      "bytes": 7749,
+      "sha256": "d99e759aa30a83b1559028dd72cd283c5fb85323bdd807b73d4c79d6b5974808"
+    },
+    {
+      "path": "01_游戏源码/assets/hook_dia.png",
+      "bytes": 9459,
+      "sha256": "5ea9092880f547bdfb4de5ff61d07aeb96a13b5daf650bba0092b2568bbb0229"
+    },
+    {
+      "path": "01_游戏源码/assets/line_tex.png",
+      "bytes": 155,
+      "sha256": "812276fc730ad9ea5006badfff4d6efb8b24896adfca3e2c73d1bdfc7e977eb1"
+    },
+    {
+      "path": "01_游戏源码/assets/map_abyss_portal.webp",
+      "bytes": 47448,
+      "sha256": "b81604128a35b72677ef3e18f3d3d54a507a69aad772ae662a93901d8110e175"
+    },
+    {
+      "path": "01_游戏源码/assets/map_pixel_depth.webp",
+      "bytes": 77274,
+      "sha256": "ac0d937772216e2104308c4d2bd34d18331b492922724f7bbc5cbd8f1ef84873"
+    },
+    {
+      "path": "01_游戏源码/assets/map_pixel_seabed.webp",
+      "bytes": 93390,
+      "sha256": "24cb9db2920b6815c9052ce3d3ac12e79c8791c8f0509d1629a26ca3af674caa"
+    },
+    {
+      "path": "01_游戏源码/assets/map_pixel_surface.webp",
+      "bytes": 64262,
+      "sha256": "ed5b64511fb73e2f107963614435735db8bf2a1b8d624981cf49880c6b2d9252"
+    },
+    {
+      "path": "01_游戏源码/assets/map_structure_0.webp",
+      "bytes": 17618,
+      "sha256": "c2da6469aebaf1d7fada210dc64ff9e2d57c5965ab4d69ec0e796e1030153024"
+    },
+    {
+      "path": "01_游戏源码/assets/map_structure_1.webp",
+      "bytes": 9352,
+      "sha256": "3346e506baee43c80c726b2f54c569a1b4356211ad2fffec3f8653953d0da4e1"
+    },
+    {
+      "path": "01_游戏源码/assets/map_structure_2.webp",
+      "bytes": 16082,
+      "sha256": "628f0bbed3bb0304aa638efac3a0e221b5d66a23b61ca0892ec713a3d29a45fd"
+    },
+    {
+      "path": "01_游戏源码/assets/map_structure_3.webp",
+      "bytes": 15544,
+      "sha256": "e747b6670b6f7f3fdd79daeb581486c9fb19f0303a6d37c6a8f7bab7c4dc7a4c"
+    },
+    {
+      "path": "01_游戏源码/assets/map_structure_4.webp",
+      "bytes": 17860,
+      "sha256": "6c4cb3e3169be8ce68292f016b0da59e1bde0a9fbe1c679f947439377ebcde71"
+    },
+    {
+      "path": "01_游戏源码/assets/map_structure_5.webp",
+      "bytes": 13438,
+      "sha256": "93485b0bced2c461dd6d6eec4c4a03064758c2b4ff31734a8ee8c98a9d5a9119"
+    },
+    {
+      "path": "01_游戏源码/assets/map_structure_6.webp",
+      "bytes": 16880,
+      "sha256": "69e201770951f53184b2857c1dc869a2f18abc40727c43ce841033efc13f1637"
+    },
+    {
+      "path": "01_游戏源码/assets/map_structure_7.webp",
+      "bytes": 16460,
+      "sha256": "71ee7d96a2f6343e473d9ff516726277a0c7ab96c0636f6a14c37040bf97b6c2"
+    },
+    {
+      "path": "01_游戏源码/assets/reef_atlas_v011.png",
+      "bytes": 1626286,
+      "sha256": "eb03981bad5f37f780eec49cb74057a86095bd34892fa1fab9b63a33e98b52e1"
+    },
+    {
+      "path": "01_游戏源码/assets/reef_scene_v011.png",
+      "bytes": 1785505,
+      "sha256": "8aef28d08f96341cfb89eae42d940e018c2964ff89e3119037e8725ec7a5b1e1"
+    },
+    {
+      "path": "01_游戏源码/assets/rock.png",
+      "bytes": 61090,
+      "sha256": "b16cbe958faa55ee47a0ee51d22465bacdec5d4105266b4c1c5d1711530a9446"
+    },
+    {
+      "path": "01_游戏源码/assets/rock_b.png",
+      "bytes": 16747,
+      "sha256": "9632914e9b149e6fa1ac9898d7584a81c6010dbb4a9c35ac4e5e6c9c8ef22fea"
+    },
+    {
+      "path": "01_游戏源码/assets/rock_c.png",
+      "bytes": 17608,
+      "sha256": "c24f84d9dde6f41e244f4e76be966e773b8f45dc7ffb066e9942361f2559b458"
+    },
+    {
+      "path": "01_游戏源码/assets/rock_d.png",
+      "bytes": 26734,
+      "sha256": "4e9b52e8990fc90836ddb31a4b32bd9041817b0ad6bf891959e0d2e61be807b2"
+    },
+    {
+      "path": "01_游戏源码/assets/rock_e.png",
+      "bytes": 61214,
+      "sha256": "b602d1862911f6bd9d04febe050f2be3850e657535baa93f232669c49f8967d6"
+    },
+    {
+      "path": "01_游戏源码/assets/rock_f.png",
+      "bytes": 14306,
+      "sha256": "b207f0473dd5c4f760223f88f152bcf4e764d3f9e389f8f608cd1978dcf779fd"
+    },
+    {
+      "path": "01_游戏源码/assets/rod.png",
+      "bytes": 16060,
+      "sha256": "ee363593b58a75dc2befc999598bba8df7b40873ae2a436b74ba06dc725c81d9"
+    },
+    {
+      "path": "01_游戏源码/assets/seaking.png",
+      "bytes": 68650,
+      "sha256": "1a8ad524588d842cb4b92a3c5f5d2753867ba34747248f75fef4fb3775df9dd1"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_btn.png",
+      "bytes": 8948,
+      "sha256": "a354272492b632e6d664ee0fb888f84adc7baf1fc61213fa5635e8ca840fbbe1"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_card_gear.png",
+      "bytes": 26026,
+      "sha256": "38fedff49cc3045b2f7f4bba7d82f68c8823e093a50380e0511245191197af01"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_cast.png",
+      "bytes": 14987,
+      "sha256": "bd56413db8b0d7c73de7475b6528207b42dc4e830176a717ba925463ca9a72eb"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_close.png",
+      "bytes": 3006,
+      "sha256": "444fb54876684611a54553bfe31eb7fd68a313b0a9065e3ecc120e217353502c"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_coin.png",
+      "bytes": 4077,
+      "sha256": "b91489ccd74ca6f1e5e85619d085f300523b43dddb2d01f09906c0b30919e415"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_download.png",
+      "bytes": 6010,
+      "sha256": "d0de9597e7b19051477663b79406e4e2c739fa7da23d8f6bd64f7de5d584e35c"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_finger.png",
+      "bytes": 47679,
+      "sha256": "cb610d0bdd2845d9ac88023e11ce9ee102cb2b93f8bd185cfc0aeec7ae15354b"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_goal.png",
+      "bytes": 14350,
+      "sha256": "e677e46f8dc87c9b27681c8321b278e9040d20217aced5faaf9af09e61612017"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_ico_line.png",
+      "bytes": 7519,
+      "sha256": "3c94d773c3d59f8842645e1619b4803168f70bf5d2c3331b8a66166e2b474e92"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_life_card.webp",
+      "bytes": 21402,
+      "sha256": "9e008411ee17e6d823a1356a0887cbf64051d47637dbea4416b38e108f42dc91"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_life_card_selected.webp",
+      "bytes": 22496,
+      "sha256": "e8250aa070eda865e843a0ebb1107479b8df008a0d1b809ffe02ceb6a451bdb4"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_life_coin.webp",
+      "bytes": 4986,
+      "sha256": "ea6b1cc26c851acf0c2b6f7eff4b87111c9e243e7ef6250d4d68d3102fccfb81"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_life_nav.webp",
+      "bytes": 16552,
+      "sha256": "e8fe5ed11ef8068832e6fd8c6ef4326bdab3f9a971c78c57bf0ccb206a4f5252"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_life_panel.webp",
+      "bytes": 38962,
+      "sha256": "fc5c2037c21044441a3d246080ad43b258c4f96e58bd2ef7ca4c5ce12b09f9dc"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_life_plaque.webp",
+      "bytes": 15772,
+      "sha256": "6f4b8f19aca448a339d01a59465a711e02a708f085e8b59d5b0813777bcec53d"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_life_primary.webp",
+      "bytes": 10542,
+      "sha256": "d5d6042a41441679e9a26ddf7bcdc8c0e4ad55d138ee63957b3ee6520ebda5fe"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_life_round.webp",
+      "bytes": 18464,
+      "sha256": "eb0fe00e72da9ada7fa477a53fb748ca524d99a69271a392a74c695fb33e3023"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_line.png",
+      "bytes": 1464,
+      "sha256": "d5257251d56cffde1bef6424af1f82d1146ee379cdf41e90405600905c45edbd"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_line_fill.png",
+      "bytes": 3188,
+      "sha256": "4cea8ba6ecf7f68951996390bbf3d69e198de33c2694f5f172abb0e7289bd309"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_loading_fill.png",
+      "bytes": 181649,
+      "sha256": "e4132f9c2b450ee5796e1f3241b31a737270d50240e5e6b43ddc5ac6d90e8c02"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_loading_frame.png",
+      "bytes": 239375,
+      "sha256": "2f1b50871ec5439ffea8571a85d8f6443936c357172936dfbba0b34efc2f58d2"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_loading_mask.png",
+      "bytes": 129860,
+      "sha256": "a0adff68dd4e8b2af4d6574ee2b2faecd3f2a18f73aaa6996e58f793e3c16f2f"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_reel.png",
+      "bytes": 15852,
+      "sha256": "77cf92def98a795e03b2bd393e5c17df9b3bee247612ca7470c860f09a885888"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_upbtn.png",
+      "bytes": 2439,
+      "sha256": "41f57d902a908d9a895b2586d4322b7d3020f3c6103c9f469046e1f508d279a3"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_upgrade.png",
+      "bytes": 3549,
+      "sha256": "fbc2c0222128236a7887b77e08c1040620e1622120cdf0571f9bb83dc12fca5c"
+    },
+    {
+      "path": "01_游戏源码/assets/ui_uprow.png",
+      "bytes": 1773,
+      "sha256": "0643aefb91c88bcfad5508d57b4c18121d8a332d1a9457ed3a8700737378d182"
+    },
+    {
+      "path": "01_游戏源码/assets/wave_ai.png",
+      "bytes": 11100,
+      "sha256": "dda53395a9f5f4034b58d088f7341f691deeea8c8dd86c3af4efdceb6e0b2513"
+    },
+    {
+      "path": "01_游戏源码/assets/wreck.png",
+      "bytes": 109399,
+      "sha256": "09c711515c31b2782029a4d41df37ef8f1a217bcf63d57f8acb729dcb1dee91c"
+    },
+    {
+      "path": "01_游戏源码/assets/换图清单.md",
+      "bytes": 5818,
+      "sha256": "1b5ad9a3e54fb631b388cc6100bec435a4d738cb24dccd820013f63f08793f86"
+    },
+    {
+      "path": "01_游戏源码/build_standalone.py",
+      "bytes": 12053,
+      "sha256": "abda714c1345446df0339684d39bf1ff79b5343a88db4f355f31c3733b140922"
+    },
+    {
+      "path": "01_游戏源码/compress_assets.py",
+      "bytes": 2130,
+      "sha256": "4a6957f057781f8c31b4a7d3565821964611d477184e8cd53f11399dab57dfc5"
+    },
+    {
+      "path": "01_游戏源码/index.html",
+      "bytes": 5454,
+      "sha256": "f87fd59bbc291744989be0182cbedc2bc36ea00724bf5e0d094568c99d36077e"
+    },
+    {
+      "path": "01_游戏源码/project-marker.txt",
+      "bytes": 32,
+      "sha256": "0fec4260d3693d662bff762da1f4189394a85aeeb6dba7a1cad3a6067fa55815"
+    },
+    {
+      "path": "01_游戏源码/requirements.txt",
+      "bytes": 15,
+      "sha256": "1954ca940740c612a12e7abf0a307b7394715964d66dc8037d503fdd5c1b6424"
+    },
+    {
+      "path": "01_游戏源码/src/cat/catSystem.js",
+      "bytes": 9360,
+      "sha256": "a357fe310ec60f5d5a57240b3ae81f386898e05df0fad922d2af52c39e853b64"
+    },
+    {
+      "path": "01_游戏源码/src/catCare.css",
+      "bytes": 6157,
+      "sha256": "172710bde5829258e486cb52c1f21b6a7949ea96aba19aa7152ba75a4c463b2c"
+    },
+    {
+      "path": "01_游戏源码/src/catalogJournal.css",
+      "bytes": 4125,
+      "sha256": "d7a030b887dd4747eb4e1ae37ec15a8ea091fbcc88089ad59449053072619650"
+    },
+    {
+      "path": "01_游戏源码/src/coast.css",
+      "bytes": 10328,
+      "sha256": "41a326c13308143d5a35c756275bc132d0193401be2ef7f676389ec233193ed0"
+    },
+    {
+      "path": "01_游戏源码/src/config/balanceConfig.js",
+      "bytes": 2357,
+      "sha256": "ca756e64afc667ea4b94d97e2546734ec6328c7c5fdc8090bbc631e09c849dfc"
+    },
+    {
+      "path": "01_游戏源码/src/config/catAppearanceConfig.js",
+      "bytes": 1265,
+      "sha256": "c4f20ffca286a8aea3e7a1a90b25415b93de8b51dc877e65506a970e748dd825"
+    },
+    {
+      "path": "01_游戏源码/src/config/catConfig.js",
+      "bytes": 1034,
+      "sha256": "9e2a00ad65bc1fc307957feea54aea2587a4d7dc6ea23e1c8bf13f8defee407f"
+    },
+    {
+      "path": "01_游戏源码/src/config/facilityConfig.js",
+      "bytes": 1680,
+      "sha256": "91416203d5fa46eab24b3b6934555ab57c06a6a5fd22439f2348ec5d2bbdd792"
+    },
+    {
+      "path": "01_游戏源码/src/config/fishCatalogConfig.js",
+      "bytes": 3462,
+      "sha256": "81e0c7cf2f31864a16c171c10fe325579b73ada12fa6ef7b2b7bb1ace8c2d2f2"
+    },
+    {
+      "path": "01_游戏源码/src/config/fishConfig.js",
+      "bytes": 672,
+      "sha256": "16d43fcc62432b6a002753d96500b69551f82ab73ca91bcfb404af6666039cab"
+    },
+    {
+      "path": "01_游戏源码/src/config/fishingFeelConfig.js",
+      "bytes": 1322,
+      "sha256": "d18bac5ae946aabaad4beb4471451e5fa9c31ed2db465c8d2d008547b2266e6a"
+    },
+    {
+      "path": "01_游戏源码/src/config/gameDataSchema.js",
+      "bytes": 1497,
+      "sha256": "a876723fb93a85f24dd92b09f5de6e110cbd6c7e267eb7cc62ddf5e00e22b688"
+    },
+    {
+      "path": "01_游戏源码/src/config/interactionFeelConfig.js",
+      "bytes": 877,
+      "sha256": "2edf7ee5e40dda0faf7b6720537d9e2d97322d66a0529813d5fe1889d7d4b251"
+    },
+    {
+      "path": "01_游戏源码/src/config/localizationConfig.js",
+      "bytes": 14869,
+      "sha256": "943d3cf96e101bc48be3a853fa8466a67ab056f47ac2c792554a62598766dd29"
+    },
+    {
+      "path": "01_游戏源码/src/config/mainLayoutConfig.js",
+      "bytes": 99,
+      "sha256": "6aff63f1523ecf0bf302a8d1572fb71da098cc8ce6c7a6ade8749b325fdeb06b"
+    },
+    {
+      "path": "01_游戏源码/src/config/mapConfig.js",
+      "bytes": 426,
+      "sha256": "abbe0ef556722d7eb45b7b3f71c66cf9a0dd8123dbba5d7562ed26e80ab8d4c9"
+    },
+    {
+      "path": "01_游戏源码/src/config/mapThemeConfig.js",
+      "bytes": 427,
+      "sha256": "0e783e9139c4ce438084ad11c251d0688cac6c76da327567555bde666f1999f9"
+    },
+    {
+      "path": "01_游戏源码/src/config/pixelWorldConfig.js",
+      "bytes": 5398,
+      "sha256": "dbc9488c4194042b2ab1e2dec2206d065af0369616c304b043b6bfd99744a2e7"
+    },
+    {
+      "path": "01_游戏源码/src/data/defaultSaveData.js",
+      "bytes": 2948,
+      "sha256": "fae6738e2bacc9634b67d4f0fa9f9563df5fc275dc390735da4d7a1d296f2413"
+    },
+    {
+      "path": "01_游戏源码/src/debug.js",
+      "bytes": 76666,
+      "sha256": "13f37c17c550fe09ed2732c58af4684e33c2397e6716b284c5803966fc7b56db"
+    },
+    {
+      "path": "01_游戏源码/src/game.js",
+      "bytes": 250726,
+      "sha256": "0282a47a1a1d999e17f69d578e03c8bfc32292d73826d8474a58bc720053fa75"
+    },
+    {
+      "path": "01_游戏源码/src/harvest.css",
+      "bytes": 6845,
+      "sha256": "32ba3d0184eecb2f262009e2422a8fe1886c34202e34c652183c4c3002e4af04"
+    },
+    {
+      "path": "01_游戏源码/src/homeEditor.css",
+      "bytes": 5677,
+      "sha256": "5c01e3cddec810e2697b7705f3a8c0e7360e02f3697c1aebc40edac099df358f"
+    },
+    {
+      "path": "01_游戏源码/src/homeEditor.js",
+      "bytes": 11207,
+      "sha256": "26f1933eecd72f391f8f981f0b358b7038c6d7d2aa9cfe9a37d2f483e96d4f4b"
+    },
+    {
+      "path": "01_游戏源码/src/lifeScene.css",
+      "bytes": 38441,
+      "sha256": "4f9f53e273b611eff37b912dd431118e74ad22b4461caa46ed10fa07e16eeedd"
+    },
+    {
+      "path": "01_游戏源码/src/localization.css",
+      "bytes": 1836,
+      "sha256": "db680a7838bbbaf453b4cdd262a66734cb10e8bf1a9b2ec624ee41cb8a8c048f"
+    },
+    {
+      "path": "01_游戏源码/src/mainSceneEditor.css",
+      "bytes": 5050,
+      "sha256": "e5ddf8438eb93639303032ffaff6731556e7da07483f2fe24d49d6bee8ca380e"
+    },
+    {
+      "path": "01_游戏源码/src/mainSceneEditor.js",
+      "bytes": 12049,
+      "sha256": "cae945563c923b39fffd6a7ca1ce9b423d00ab96377279a6d39bfaa04461789e"
+    },
+    {
+      "path": "01_游戏源码/src/mainSceneEditorEnhanced.css",
+      "bytes": 767,
+      "sha256": "6ea35fec1776ad5a28177f4977b93f7be6a398c3944773b53a1a42ce7af38b54"
+    },
+    {
+      "path": "01_游戏源码/src/platform/crazyGamesAdapter.js",
+      "bytes": 3219,
+      "sha256": "503d3cc74bc41415b69ff130c73a5292189ce697ccf5cce0a1571eac3bdecfa1"
+    },
+    {
+      "path": "01_游戏源码/src/platform/douyinAdapter.js",
+      "bytes": 1542,
+      "sha256": "985f412596c3eeb228108399a9c7ee6d1ded83d92b88496518c8f54073a44d18"
+    },
+    {
+      "path": "01_游戏源码/src/platform/platformSystem.js",
+      "bytes": 4290,
+      "sha256": "fddbb49428c89f6054269fc877018ae4d2dd53308fc5e7eea1b02e74c1192b63"
+    },
+    {
+      "path": "01_游戏源码/src/platform/wechatAdapter.js",
+      "bytes": 480,
+      "sha256": "35fcb2e71687997681e600f0bb0ea35eca4ef11f1247ddf7fa29816daa59a7ab"
+    },
+    {
+      "path": "01_游戏源码/src/save/saveSystem.js",
+      "bytes": 14389,
+      "sha256": "c7a13cd8f62ff2c78994cdee6805b1c0f77c9a30e3439198677215f27630dd1f"
+    },
+    {
+      "path": "01_游戏源码/src/style.css",
+      "bytes": 36085,
+      "sha256": "f23dbe7a799b45c9a95afa7e161498087b6ec5eeb3291f35b8841b6ef3e49823"
+    },
+    {
+      "path": "01_游戏源码/src/systems/analyticsSystem.js",
+      "bytes": 5936,
+      "sha256": "0d9b200f696d8c33006f344c89e67af7963ad975229266461854c5c77a08587b"
+    },
+    {
+      "path": "01_游戏源码/src/systems/catCareSystem.js",
+      "bytes": 12176,
+      "sha256": "bcba7df0ff3db0d1d9d43c523681dc98f25b1bfca532240f79a278682d88a79e"
+    },
+    {
+      "path": "01_游戏源码/src/systems/catCollectionSystem.js",
+      "bytes": 1843,
+      "sha256": "112e3cfa00208193208b3bdcb67f2fc61b4588f49344d8d75819ddea66c71434"
+    },
+    {
+      "path": "01_游戏源码/src/systems/catHomeSystem.js",
+      "bytes": 691,
+      "sha256": "c48a62d7b65f5be2f010467bef67967cf007a926edcedc3ea3ed92838d8d9ebb"
+    },
+    {
+      "path": "01_游戏源码/src/systems/catShowcaseSystem.js",
+      "bytes": 993,
+      "sha256": "749cf5c01807695c7c20ac511e9f9ab290a2a672d02c6b950e09dfbb42e1256a"
+    },
+    {
+      "path": "01_游戏源码/src/systems/catalogArtSystem.js",
+      "bytes": 3323,
+      "sha256": "c5c03cb2b51c6b1df81f4d261206ee2a6f68b21df5de6f6c41e0b90f383d6085"
+    },
+    {
+      "path": "01_游戏源码/src/systems/coastSystem.js",
+      "bytes": 19932,
+      "sha256": "9114aa61cfbac4d31fd7ca0b1ca6c269c3081a205073eca3bbdd9cf3aeddbd63"
+    },
+    {
+      "path": "01_游戏源码/src/systems/collectionFeedbackSystem.js",
+      "bytes": 1135,
+      "sha256": "9325c42dd2759dfdf19b01cdcf09239ea7fbbd3aff904d27ebbb4c61225363ea"
+    },
+    {
+      "path": "01_游戏源码/src/systems/collectionViewSystem.js",
+      "bytes": 1980,
+      "sha256": "0ac445f63e9aad0ea259fe3450ad65755ab4f3a30eb17e303cc438911d6dbe40"
+    },
+    {
+      "path": "01_游戏源码/src/systems/depthSystem.js",
+      "bytes": 4663,
+      "sha256": "0fec46b36a3978a6490a5c6f5d37630b87f0610db13a5f9da3c4f61665852dc9"
+    },
+    {
+      "path": "01_游戏源码/src/systems/economySystem.js",
+      "bytes": 3121,
+      "sha256": "2d1be19505adcc49d374a8b21bb0ce89e1b77c5c28f5d49832ea96af93c306b0"
+    },
+    {
+      "path": "01_游戏源码/src/systems/facilitySystem.js",
+      "bytes": 1633,
+      "sha256": "4ba3d14d778985fde50fe6b19be62a5b6972f41e331223da6bef7421bdb4b5ee"
+    },
+    {
+      "path": "01_游戏源码/src/systems/fishBookSystem.js",
+      "bytes": 3067,
+      "sha256": "0697f37caefbc466abc51ad55e0fcf4e634602459924eb296a2f81b5cf024d0b"
+    },
+    {
+      "path": "01_游戏源码/src/systems/fishCatalogSystem.js",
+      "bytes": 1565,
+      "sha256": "9a4979588b6f5cbe67ac0dac97c34a31cb8684ea6d9e1b5d920f01f9e0c50048"
+    },
+    {
+      "path": "01_游戏源码/src/systems/gameEventBus.js",
+      "bytes": 2804,
+      "sha256": "196258fcbc4a7f8cbd77fff11e6750709b27d8109a4d38fba7357c9baa09d399"
+    },
+    {
+      "path": "01_游戏源码/src/systems/harvestArtSystem.js",
+      "bytes": 4388,
+      "sha256": "35d6a030a86b442dbed23664121269440ae29bbd7d771e769fbf9618c1a809e5"
+    },
+    {
+      "path": "01_游戏源码/src/systems/harvestPresentationSystem.js",
+      "bytes": 7596,
+      "sha256": "bc988889c2b2ba3156d5dfdeed48d1d3f47a0e7c7c8f55651044974a21b2032f"
+    },
+    {
+      "path": "01_游戏源码/src/systems/homeFishingBridgeSystem.js",
+      "bytes": 908,
+      "sha256": "aa22f53331b31fa356d354d601a89ae0ab2c6f4339529ecbce9d67dddbe07ff7"
+    },
+    {
+      "path": "01_游戏源码/src/systems/homeLayoutSystem.js",
+      "bytes": 5636,
+      "sha256": "ea903bf14577fc083e66ea2993b770f8891639233c99bb314f33d248ed24ef1e"
+    },
+    {
+      "path": "01_游戏源码/src/systems/homeStateSystem.js",
+      "bytes": 718,
+      "sha256": "609c414c3938390f4d5b7d2103bad96cc8fb0c169d0b251cc950c47cd3b5322f"
+    },
+    {
+      "path": "01_游戏源码/src/systems/homeSystem.js",
+      "bytes": 19629,
+      "sha256": "8533a7273bbdbc717f14f0a2cbdcafcd09237a34daba9a713f9af23113a0e034"
+    },
+    {
+      "path": "01_游戏源码/src/systems/localizationSystem.js",
+      "bytes": 8597,
+      "sha256": "00be85c31f5ee90ffc38fe2442568ebec0a9c5a716fc6d014c1229efa0c5b060"
+    },
+    {
+      "path": "01_游戏源码/src/systems/mainSceneEditorBridge.js",
+      "bytes": 5352,
+      "sha256": "71e4f854ba02cce32a1856f1257c84d3f66c8809703dca9863f32339b546efa9"
+    },
+    {
+      "path": "01_游戏源码/src/systems/mainSceneLayoutSystem.js",
+      "bytes": 5737,
+      "sha256": "ab6e1bed15e4322c92f35bb300580fbe0a3c1a1a2967d139d77e98fcb71d99f8"
+    },
+    {
+      "path": "01_游戏源码/src/systems/mapEditorSystem.js",
+      "bytes": 13765,
+      "sha256": "b87a3f029baccb9e89d9aa4da271a9119e1435edb902f1793835415b2fa3132d"
+    },
+    {
+      "path": "01_游戏源码/src/systems/mapExpeditionSystem.js",
+      "bytes": 702,
+      "sha256": "332b6369d0e43e7f81b1ac77323e828f5410f0c4c16b7b9c824182d8b999ae3d"
+    },
+    {
+      "path": "01_游戏源码/src/systems/mapVisualSystem.js",
+      "bytes": 1796,
+      "sha256": "0b80e46590d3d85e41ba2fe5561b3ad665f989ef9c43b8a1acaa2861eb2f29c6"
+    },
+    {
+      "path": "01_游戏源码/src/systems/onboardingSystem.js",
+      "bytes": 3654,
+      "sha256": "acfcd515effc8a3391d38bf1da0cba88ed50ebd0beb335304f724e4a17fa0331"
+    },
+    {
+      "path": "01_游戏源码/src/systems/overlayManagerSystem.js",
+      "bytes": 742,
+      "sha256": "aba1ffef255bad765d980a222b2fcd808898b715bd3b35ba645beb1170cb01c9"
+    },
+    {
+      "path": "01_游戏源码/src/systems/pixelWorldSystem.js",
+      "bytes": 3461,
+      "sha256": "6eb21bfe5359a9732da82619abc6694b2885bbb0013a1468cbb6db4e55718dce"
+    },
+    {
+      "path": "01_游戏源码/src/systems/progressGuideSystem.js",
+      "bytes": 1299,
+      "sha256": "3d74b2886da8e6d20b198aa9c78c842c6788e9d96ac1b668345bb629561866d0"
+    },
+    {
+      "path": "01_游戏源码/src/systems/reefArtSystem.js",
+      "bytes": 5241,
+      "sha256": "dc89314a53a696607253843ef09fc8efc6673205680b392a13cd9a04e5b8e274"
+    },
+    {
+      "path": "01_游戏源码/src/systems/sceneRouterSystem.js",
+      "bytes": 1112,
+      "sha256": "01fa750f85905224ccf3d4e0b21027e40f4410e994e14da2c3f9e5c930cb7ded"
+    },
+    {
+      "path": "01_游戏源码/src/systems/sessionSafetySystem.js",
+      "bytes": 2937,
+      "sha256": "652712b27d88c938b8473ba50c951f3734e6f9e9aa5eed486539fe2c7acb8e72"
+    },
+    {
+      "path": "01_游戏源码/src/systems/settingsSystem.js",
+      "bytes": 755,
+      "sha256": "c6810090645a69cf586b837ad3fef3d8e316b8728abccd6ced94e05a60ce4d0a"
+    },
+    {
+      "path": "01_游戏源码/src/systems/uiFeedbackSystem.js",
+      "bytes": 1126,
+      "sha256": "b53b5c3d6de71e69413a1c2bf546d98f4643e1b21cf58870c294f66084d28145"
+    },
+    {
+      "path": "01_游戏源码/tools/asset-policy.json",
+      "bytes": 722,
+      "sha256": "f9c55292fd333c5f9133d2b540905d80247d77f3547cb16d55b2a8cb8d1cb523"
+    },
+    {
+      "path": "01_游戏源码/tools/build_crazygames.py",
+      "bytes": 6331,
+      "sha256": "d91f1c5ce1ac2c48354155c0dfae7cb56f9416aa80052439dc06b01716ea92a4"
+    },
+    {
+      "path": "01_游戏源码/tools/build_crazygames_optimized.py",
+      "bytes": 16099,
+      "sha256": "2548a64e014681a0b20c6fbc2a6f7223bae6e485d72b514207c3acf2fcc1c821"
+    },
+    {
+      "path": "01_游戏源码/tools/build_wechat_full.py",
+      "bytes": 7934,
+      "sha256": "1b9bae566cfd52e99b57b74e13de293ec1f25f224dc5a6e34885fca9cebe9edd"
+    },
+    {
+      "path": "01_游戏源码/tools/crazygames_bootstrap.js",
+      "bytes": 4491,
+      "sha256": "6a1624b836bccb790f1541ca8f630583516c98f45e3f263ced87d084c62539e7"
+    },
+    {
+      "path": "01_游戏源码/tools/crazygames_home_type.css",
+      "bytes": 933,
+      "sha256": "60bf095437797c21391a2072beeefb615a86b45ecf06663430129edc7c57b52d"
+    },
+    {
+      "path": "01_游戏源码/tools/crazygames_loading_build.py",
+      "bytes": 4085,
+      "sha256": "485f919f94af525f705b936c3cf1eed884da17484e05e3d573183e44f5e86230"
+    },
+    {
+      "path": "01_游戏源码/tools/crazygames_performance_build.py",
+      "bytes": 2361,
+      "sha256": "02e5797bf36cd29e07148758135b2819c6d5df3af0838e33ab8f77660a45199b"
+    },
+    {
+      "path": "01_游戏源码/tools/crazygames_sdk_build.py",
+      "bytes": 2249,
+      "sha256": "b06bf53d4e7d49d7b9fe83fb2e4c773362cb8bbb4b1ce16522fa892554d5fabb"
+    },
+    {
+      "path": "01_游戏源码/tools/package_github.py",
+      "bytes": 5118,
+      "sha256": "fc2da9478a25c2ac4e7a499541b9aded1507ee727ace9c55f7c7f2b9180ccc10"
+    },
+    {
+      "path": "01_游戏源码/tools/slice_life_ui.py",
+      "bytes": 1007,
+      "sha256": "6ae7ea1fbc770fd8538ea9600449d44f7928e07f573d0165575871299b89d084"
+    },
+    {
+      "path": "01_游戏源码/tools/test_crazygames_sdk.cjs",
+      "bytes": 2723,
+      "sha256": "9302c94c7b63d9c1163066cc24de438a67eba839309b8879be2f1a4b2d55bcd1"
+    },
+    {
+      "path": "01_游戏源码/tools/verify_no_portal.mjs",
+      "bytes": 5532,
+      "sha256": "1d0bb2ebc0763d63153845af66b3e389e730efecf700fbc85fff9f9faa9c7cd1"
+    },
+    {
+      "path": "01_游戏源码/tools/verify_phase1.mjs",
+      "bytes": 6511,
+      "sha256": "c4180263aa96dfe72bba53affcd0b781d6afa3dfb01c3a2c7aa60442ee01ca6b"
+    },
+    {
+      "path": "01_游戏源码/tools/verify_phase2.mjs",
+      "bytes": 4279,
+      "sha256": "bd67a51d6d821e3ea43ce1e699f0ff8aafd03dea660e339a26af679408a6d0b2"
+    },
+    {
+      "path": "01_游戏源码/tools/verify_phase3.mjs",
+      "bytes": 3113,
+      "sha256": "53a164423b4578281cd7693ebe3cb4be29fe9f4d641872a597dc0b9bc80ee13a"
+    },
+    {
+      "path": "01_游戏源码/tools/verify_phase4.mjs",
+      "bytes": 6717,
+      "sha256": "2c9deed0ac473a68a35c0633c4f4c38cd750b8158638fdfc4f12fb6f00eac7c8"
+    },
+    {
+      "path": "01_游戏源码/tools/verify_phase5.mjs",
+      "bytes": 3553,
+      "sha256": "eeee8f04928fc702664ae83165ae1bc421a6c3650737912b8e5529796bb37d74"
+    },
+    {
+      "path": "01_游戏源码/tools/verify_phase6.mjs",
+      "bytes": 4434,
+      "sha256": "c924dbbba950ae09bc7b89c006b7dd0e987b4d33e2058c3ce8188693cd3a90cb"
+    },
+    {
+      "path": "01_游戏源码/tools/verify_v04.mjs",
+      "bytes": 4951,
+      "sha256": "482a8dc0ce6252ccb6670044ec5b41ebb8ea3634add8b4dbcaf1e7e3bb30fba0"
+    },
+    {
+      "path": "01_游戏源码/tools/verify_v05.mjs",
+      "bytes": 1189,
+      "sha256": "8dc0d153bb88bd6022cb29e750d47e79b9215e41244e32e73228523bdd4aeb20"
+    },
+    {
+      "path": "01_游戏源码/tools/verify_v06.mjs",
+      "bytes": 2747,
+      "sha256": "f556cecc07531d43874723176d7509563f090b07d98e375ce5fc5e8344c72e08"
+    },
+    {
+      "path": "01_游戏源码/tools/verify_v07.mjs",
+      "bytes": 1488,
+      "sha256": "10cee85ebb5eec9202d6bc804ed25ac500fcd20af3762d4f7586ff19e0c89840"
+    },
+    {
+      "path": "01_游戏源码/tools/verify_v08.mjs",
+      "bytes": 1582,
+      "sha256": "5260f739b5ac313afad926069e78fdd39e9ecad8942d52817ac87f6658dfdd1a"
+    },
+    {
+      "path": "01_游戏源码/wechat/runtime.js",
+      "bytes": 7592,
+      "sha256": "3d61d5b8c47365ec7f0308dd758a6da32758b3e86008cef508f97078fd4d8188"
+    },
+    {
+      "path": "01_游戏源码/wechat/view.js",
+      "bytes": 16910,
+      "sha256": "5b85215b315839057004d80a58b9d465628a69b465fe7c4e72e6d4b2f0b124b8"
+    },
+    {
+      "path": "01_游戏源码/主界面编辑器.html",
+      "bytes": 3841,
+      "sha256": "fa104e81b515c34e3d46131918f6b4e25dd2adad9249b6a868fae209920a1da5"
+    },
+    {
+      "path": "01_游戏源码/主界面部件编辑器.html",
+      "bytes": 4077,
+      "sha256": "e366116aec9127fc72f4bcdac969d3c5733279a184adc2f89014b052585eba56"
+    },
+    {
+      "path": "01_游戏源码/启动主界面编辑器.bat",
+      "bytes": 906,
+      "sha256": "990707ea5ea60ab00d11e2cf2a6ff6b9c829bd306fb0e132ab259fbce97fc51f"
+    },
+    {
+      "path": "01_游戏源码/启动调试.bat",
+      "bytes": 1289,
+      "sha256": "f54e1c1bd887067aeeeb8100df093b0c8f80aed1a43664960a6378c0680c223e"
+    },
+    {
+      "path": "01_游戏源码/说明.txt",
+      "bytes": 2024,
+      "sha256": "c6bc0e4f1af17b2dc3ba2d97416ec567833cad1175078df97e59733143a3ee3b"
+    },
+    {
+      "path": "01_游戏源码/阶段G_上线前检查说明.md",
+      "bytes": 2112,
+      "sha256": "0ef152345c059629f012c6fa3547ee929ccaecec0b5ecefd1ff1d535674b34ad"
+    },
+    {
+      "path": "02_美术源文件/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "03_编辑器配置/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "03_编辑器配置/主界面布局-v0.4.json",
+      "bytes": 739,
+      "sha256": "0916a2b1d7d9b4e579ad7d374eebc0ce1381d71f9b526f50a8f51785271795b5"
+    },
+    {
+      "path": "03_编辑器配置/主界面布局-v0.6.json",
+      "bytes": 752,
+      "sha256": "8e9167dd56f0c3d3aa34ed79cbc782fa9019d7f4ed29c2fda11e86467dbba7a0"
+    },
+    {
+      "path": "03_编辑器配置/主界面布局-v0.7.json",
+      "bytes": 508,
+      "sha256": "47a258eb774613acf12d31c9389a2609237a860d634106dedd23e265a7c78cc0"
+    },
+    {
+      "path": "03_编辑器配置/主界面布局-v0.8.json",
+      "bytes": 508,
+      "sha256": "47a258eb774613acf12d31c9389a2609237a860d634106dedd23e265a7c78cc0"
+    },
+    {
+      "path": "03_编辑器配置/保存到这里.txt",
+      "bytes": 361,
+      "sha256": "dd6fe4f522047babe02dbb40156abc15df166388cdd55b14c201ea7ec3b9bc5a"
+    },
+    {
+      "path": "04_试玩版本/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "05_版本备份/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "06_项目说明/CrazyGames提交处理事项.md",
+      "bytes": 6384,
+      "sha256": "ab66e5e4cae6393dff5717ac19934836e9557423f0fb647d4d8733f432ae73bf"
+    },
+    {
+      "path": "06_项目说明/版本记录.json",
+      "bytes": 26813,
+      "sha256": "3f93dca47f69eadd6302da1e5e56fc4adbe5f56bdda6e922eb62e34e90ef30e4"
+    },
+    {
+      "path": "07_项目工具/project_tools.py",
+      "bytes": 7036,
+      "sha256": "34aac9a61acb76ff9accdad550e61bf3f243e423bb57908f8b06d3dea7162253"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2386,
+      "sha256": "bea123179e31a4365afc3358d344d7ec8c9a107dac9288246ab2046048c88316"
+    },
+    {
+      "path": "打开项目-v0.2.cmd",
+      "bytes": 785,
+      "sha256": "999ed03faee4338ae1e16a677a42a723478e2eeb3713a15c60c6eeeea1f1126f"
+    }
+  ]
+}
