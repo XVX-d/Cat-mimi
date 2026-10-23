@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>猫与鱼 · 全局 UI 布局编辑器</title>
+  <link rel="stylesheet" href="./src/mainSceneEditor.css?v=2">
+  <link rel="stylesheet" href="./src/mainSceneEditorEnhanced.css?v=1">
+</head>
+<body>
+  <header class="topbar">
+    <div><small>CAT &amp; FISH · LAYOUT TOOL</small><h1>全局 UI 布局编辑器 <em>v0.18</em></h1></div>
+    <nav>
+      <button data-command="undo">撤销</button><button data-command="redo">重做</button>
+      <button data-command="export">导出配置</button>
+      <label class="file-button">导入配置<input id="importFile" type="file" accept="application/json"></label>
+      <button class="primary" data-command="open">打开游戏</button>
+    </nav>
+  </header>
+  <main class="workspace">
+    <aside class="layers">
+      <h2>游戏板块</h2>
+      <div class="scene-tabs">
+        <button class="active" data-view="yard">首页</button><button data-view="fishing">钓鱼中</button>
+        <button data-view="collection">图鉴</button><button data-view="interior">猫咪小屋</button>
+      </div>
+      <section id="canvasSection"><h2>画面部件</h2><div id="canvasLayers" class="layer-list"></div></section>
+      <h2 id="uiHeading">界面部件</h2><div id="domLayers" class="layer-list"></div>
+      <p>点击图层或画面选框进行选择。拖动选框改变位置，拖动右下角手柄改变尺寸。</p>
+    </aside>
+    <section class="stage">
+      <div class="toolbar">
+        <button data-command="zoom-out">−</button><output id="zoomValue">75%</output><button data-command="zoom-in">＋</button>
+        <button data-command="fit">适应窗口</button>
+        <label><input id="gridToggle" type="checkbox" checked> 网格</label>
+        <label><input id="guideToggle" type="checkbox" checked> 中心线</label>
+        <label><input id="lockRatio" type="checkbox"> 锁定比例</label>
+        <span class="autosave">● 自动保存</span>
+      </div>
+      <div class="stage-scroll">
+        <div id="previewWrap" class="preview-wrap grid guides">
+          <iframe id="gamePreview" src="./index.html?nodebug&main-layout-editor=1&editor-v=2" title="游戏主界面预览"></iframe>
+          <div id="selectionLayer" class="selection-layer"></div>
+          <i class="guide guide-x"></i><i class="guide guide-y"></i>
+        </div>
+      </div>
+      <footer><span id="statusText">正在载入主界面……</span><span>画布 540 × 960</span></footer>
+    </section>
+    <aside class="properties">
+      <h2>部件属性</h2>
+      <div id="emptyState" class="empty">选择一个部件开始调整</div>
+      <form id="propertyForm" class="property-form hidden">
+        <label class="wide">名称<input id="propName" readonly></label>
+        <label>X<input id="propX" type="number" step="1"></label><label>Y<input id="propY" type="number" step="1"></label>
+        <label>宽度<input id="propW" type="number" min="1" step="1"></label><label>高度<input id="propH" type="number" min="1" step="1"></label>
+        <label>层级<input id="propZ" type="number" min="-10" max="200" step="1"></label>
+        <label>透明度<input id="propOpacity" type="number" min="0" max="1" step="0.05"></label>
+        <label class="wide check"><input id="propHidden" type="checkbox"> 隐藏这个部件</label>
+        <button type="button" data-command="reset-one">恢复当前部件</button>
+        <button type="button" data-command="reset-all">恢复全部默认</button>
+      </form>
+      <h2>使用说明</h2>
+      <p>拖动调整位置，右下角调整尺寸；方向键移动 1 像素，Shift + 方向键移动 10 像素。修改会自动保存到当前浏览器，确认后导出 JSON 给我即可写入游戏版本。</p>
+      <textarea id="configText" readonly></textarea>
+      <button class="wide-button" data-command="copy">复制配置 JSON</button>
+    </aside>
+  </main>
+  <script src="./src/mainSceneEditor.js?v=5"></script>
+</body>
+</html>

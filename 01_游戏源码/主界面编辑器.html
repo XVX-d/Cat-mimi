@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>猫与鱼 · 主界面工作室</title>
+  <link rel="stylesheet" href="./src/homeEditor.css?v=1">
+</head>
+<body>
+  <header class="editor-header">
+    <div><small>CAT &amp; FISH · DEVELOPMENT</small><h1>主界面工作室</h1></div>
+    <nav>
+      <button data-command="undo" title="Ctrl+Z">撤销</button>
+      <button data-command="redo" title="Ctrl+Shift+Z">重做</button>
+      <button data-command="export">导出配置</button>
+      <label class="file-button">导入配置<input id="importFile" type="file" accept="application/json"></label>
+      <button class="primary" data-command="open-game">打开游戏</button>
+    </nav>
+  </header>
+  <main class="editor-main">
+    <aside class="left-panel">
+      <h2>场景</h2>
+      <div class="scene-tabs">
+        <button class="active" data-scene="yard">院子</button>
+        <button data-scene="interior">小屋内部</button>
+      </div>
+      <h2>界面元素</h2>
+      <div id="layerList" class="layer-list"></div>
+      <p class="help">点击画面中的元素或图层进行选择。选中后可直接拖动，方向键每次移动 1 像素，按住 Shift 移动 10 像素。</p>
+    </aside>
+    <section class="canvas-area" id="canvasArea">
+      <div class="canvas-toolbar">
+        <button data-command="zoom-out">−</button>
+        <output id="zoomValue">75%</output>
+        <button data-command="zoom-in">＋</button>
+        <button data-command="fit">适应画布</button>
+        <label><input id="gridToggle" type="checkbox" checked> 网格</label>
+        <label><input id="guideToggle" type="checkbox" checked> 中心线</label>
+      </div>
+      <div class="canvas-scroll">
+        <div id="previewWrap" class="preview-wrap grid guides">
+          <iframe id="gamePreview" title="主界面实时预览" src="./index.html?nodebug&home-editor-preview=1"></iframe>
+          <i class="guide-x"></i><i class="guide-y"></i>
+        </div>
+      </div>
+      <div class="statusbar"><span id="statusText">正在载入主界面……</span><span>画布 540 × 960</span></div>
+    </section>
+    <aside class="right-panel">
+      <h2>属性</h2>
+      <div id="emptyState" class="empty-state">选择一个界面元素开始编辑</div>
+      <form id="propertyForm" class="property-form hidden">
+        <label class="wide">元素<input id="propName" readonly></label>
+        <label>横向偏移 X<input id="propX" type="number" step="1"></label>
+        <label>纵向偏移 Y<input id="propY" type="number" step="1"></label>
+        <label>宽度<input id="propW" type="number" min="1" max="1000" step="1"></label>
+        <label>高度<input id="propH" type="number" min="1" max="1200" step="1"></label>
+        <label>层级<input id="propZ" type="number" min="-10" max="200" step="1"></label>
+        <label>透明度<input id="propOpacity" type="number" min="0" max="1" step="0.05"></label>
+        <label class="check wide"><input id="propHidden" type="checkbox"> 隐藏此元素</label>
+        <div class="property-actions wide">
+          <button type="button" data-command="reset-target">恢复该元素</button>
+          <button type="button" data-command="reset-scene">恢复当前场景</button>
+        </div>
+      </form>
+      <h2>配置说明</h2>
+      <p class="help">调整结果实时保存在当前浏览器中，开发版游戏会直接读取。完成后请导出 JSON 备份；正式发布前再将最终配置固化到项目。</p>
+      <textarea id="configText" readonly aria-label="当前布局配置"></textarea>
+      <button class="copy-button" data-command="copy">复制配置 JSON</button>
+    </aside>
+  </main>
+  <script src="./src/homeEditor.js?v=1"></script>
+</body>
+</html>

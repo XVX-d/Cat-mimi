@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"/>
+<title>猫与鱼 · 潮汐码头 -v0.33</title>
+<link rel="stylesheet" href="./src/style.css?v=330"/>
+<link rel="stylesheet" href="./src/lifeScene.css?v=330"/>
+<link rel="stylesheet" href="./src/coast.css?v=330"/>
+<link rel="stylesheet" href="./src/harvest.css?v=330"/>
+<link rel="stylesheet" href="./src/catalogJournal.css?v=330"/>
+<link rel="stylesheet" href="./src/catCare.css?v=330"/>
+<link rel="stylesheet" href="./src/localization.css?v=330"/>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="540" height="960"></canvas>
+  <!-- 所有 UI(按钮 + 目标/结算/升级/CTA 弹窗)已全部改为 Canvas 绘制(见 game.js drawCanvasButtons / drawPanels)。
+       布局走 UI_CFG(HUD/按钮)+ PANEL_UI(弹窗,模板复用),调试面板「UI/弹窗 编辑」可拖拽改。 -->
+</div>
+<!-- 免构建:双击 index.html 即可跑(图片以 data URI 内嵌在 assets_b64.js)。
+     换美术后跑 `python gen_assets_b64.py` 重生成内嵌图;打包单文件用 `python build_standalone.py`。
+     脚本顺序:图片数据 → 源码副本(供导出按钮) → 游戏主体 → 调试面板(投放时构建脚本会剥掉 debug.js) -->
+<script defer src="./src/assets_b64.js?v=330"></script>
+<script defer src="./src/config/gameDataSchema.js?v=330"></script>
+<script defer src="./src/config/fishingFeelConfig.js?v=330"></script>
+<script defer src="./src/config/interactionFeelConfig.js?v=330"></script>
+<script defer src="./src/config/balanceConfig.js?v=330"></script>
+<script defer src="./src/config/fishCatalogConfig.js?v=330"></script>
+<script defer src="./src/config/fishConfig.js?v=330"></script>
+<script defer src="./src/data/defaultSaveData.js?v=330"></script>
+<script defer src="./src/save/saveSystem.js?v=330"></script>
+<script defer src="./src/systems/fishCatalogSystem.js?v=330"></script>
+<script defer src="./src/systems/economySystem.js?v=330"></script>
+<script defer src="./src/systems/fishBookSystem.js?v=330"></script>
+<script defer src="./src/systems/gameEventBus.js?v=330"></script>
+<script defer src="./src/systems/analyticsSystem.js?v=330"></script>
+<script defer src="./src/systems/onboardingSystem.js?v=330"></script>
+<script defer src="./src/platform/platformSystem.js?v=330"></script>
+<script defer src="./src/platform/douyinAdapter.js?v=330"></script>
+<script defer src="./src/platform/crazyGamesAdapter.js?v=330"></script>
+<script defer src="./src/config/mapConfig.js?v=330"></script>
+<script defer src="./src/config/mapThemeConfig.js?v=330"></script>
+<script defer src="./src/config/pixelWorldConfig.js?v=330"></script>
+<script defer src="./src/systems/mapVisualSystem.js?v=330"></script>
+<script defer src="./src/systems/mapExpeditionSystem.js?v=330"></script>
+<script defer src="./src/systems/pixelWorldSystem.js?v=330"></script>
+<script defer src="./src/config/catConfig.js?v=330"></script>
+<script defer src="./src/config/catAppearanceConfig.js?v=330"></script>
+<script defer src="./src/cat/catSystem.js?v=330"></script>
+<script defer src="./src/systems/catCollectionSystem.js?v=330"></script>
+<script defer src="./src/systems/collectionFeedbackSystem.js?v=330"></script>
+<script defer src="./src/config/facilityConfig.js?v=330"></script>
+<script defer src="./src/systems/facilitySystem.js?v=330"></script>
+<script defer src="./src/systems/catHomeSystem.js?v=330"></script>
+<script defer src="./src/systems/homeStateSystem.js?v=330"></script>
+<script defer src="./src/systems/sceneRouterSystem.js?v=330"></script>
+<script defer src="./src/systems/overlayManagerSystem.js?v=330"></script>
+<script defer src="./src/systems/settingsSystem.js?v=330"></script>
+<script defer src="./src/config/localizationConfig.js?v=330"></script>
+<script defer src="./src/systems/localizationSystem.js?v=330"></script>
+<script defer src="./src/systems/uiFeedbackSystem.js?v=330"></script>
+<script defer src="./src/systems/sessionSafetySystem.js?v=330"></script>
+<script defer src="./src/systems/collectionViewSystem.js?v=330"></script>
+<script defer src="./src/systems/catShowcaseSystem.js?v=330"></script>
+<script defer src="./src/systems/progressGuideSystem.js?v=330"></script>
+<script defer src="./src/config/mainLayoutConfig.js?v=330"></script>
+<script defer src="./src/systems/homeLayoutSystem.js?v=330"></script>
+<script defer src="./src/systems/mainSceneLayoutSystem.js?v=330"></script>
+<script defer src="./src/systems/homeFishingBridgeSystem.js?v=330"></script>
+<script defer src="./src/systems/harvestArtSystem.js?v=330"></script>
+<script defer src="./src/systems/harvestPresentationSystem.js?v=330"></script>
+<script defer src="./src/systems/coastSystem.js?v=330"></script>
+<script defer src="./src/systems/catalogArtSystem.js?v=330"></script>
+<script defer src="./src/systems/reefArtSystem.js?v=330"></script>
+<script defer src="./src/systems/depthSystem.js?v=330"></script>
+<script defer src="./src/systems/catCareSystem.js?v=330"></script>
+<script defer src="./src/_export_src.js?v=330"></script>
+<script defer src="./src/game.js?v=330"></script>
+<script defer src="./src/systems/homeSystem.js?v=330"></script>
+<script defer src="./src/systems/mainSceneEditorBridge.js?v=330"></script>
+<script defer src="./src/debug.js?v=330"></script>
+<script defer src="./src/systems/mapEditorSystem.js?v=330"></script>
+</body>
+</html>
